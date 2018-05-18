@@ -29,7 +29,6 @@ header {
     padding-top: 20px;
     padding-right: 100px;
     width: 100%;
-    height: 60%;
     color: white; }
     header .intro .mainTitle {
       font-size: 40px;
@@ -51,7 +50,6 @@ header {
   header .navBar {
     color: white;
     width: 100%;
-    height: 30%;
     font-size: 30px;
     border-top: 2px solid white; }
   header .uList {
@@ -78,7 +76,6 @@ header {
         -ms-flex-align: center;
             align-items: center;
     width: 33.33333333333333333%;
-    height: 100%;
     margin: 0px;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
