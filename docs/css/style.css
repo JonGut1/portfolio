@@ -50,7 +50,7 @@ header {
   header .navBar {
     color: white;
     width: 100%;
-    font-size: 30px;
+    font-size: 20px;
     border-top: 2px solid white; }
   header .uList {
     display: -webkit-box;
