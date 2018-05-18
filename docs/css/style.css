@@ -1,0 +1,150 @@
+header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  margin: 0px;
+  background-color: #D8D8D8; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 25vh;
+  background-color: #2E2E2E; }
+  header .intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 20px;
+    padding-right: 100px;
+    width: 100%;
+    height: 60%;
+    color: white; }
+    header .intro .mainTitle {
+      font-size: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+    header .intro .titleDesc {
+      font-size: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      margin-top: 10px; }
+  header .navBar {
+    color: white;
+    width: 100%;
+    height: 30%;
+    font-size: 30px;
+    border-top: 2px solid white; }
+  header .uList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px; }
+  header .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 33.33333333333333333%;
+    height: 100%;
+    margin: 0px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+  header .list:hover {
+    cursor: pointer;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    color: black;
+    -webkit-box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.75);
+            box-shadow: inset 0px 100px 0px 0px rgba(255, 255, 255, 0.75); }
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  main .about {
+    padding: 20px; }
+    main .about .titleAbout {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      font-size: 40px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid black; }
+    main .about .contentAbout {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 10px;
+      height: 245.70;
+      margin-top: 10px;
+      border: 1px solid black;
+      background-color: #E6E6E6;
+      -webkit-box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5);
+              box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5); }
+      main .about .contentAbout .text {
+        text-align: left;
+        padding: 10px;
+        width: 40%;
+        font-size: 18px;
+        font-weight: bold;
+        word-wrap: break-word; }
+      main .about .contentAbout .imgMe {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        width: 50%;
+        height: 60%;
+        -webkit-box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+                box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        -webkit-transition: 0.5s;
+        transition: 0.5s; }
