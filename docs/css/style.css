@@ -4,7 +4,8 @@ header {
 
 body {
   margin: 0px;
-  background-color: #D8D8D8; }
+  background-color: #D8D8D8;
+  width: 100%; }
 
 header {
   display: -webkit-box;
@@ -93,55 +94,175 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+
+.about {
+  width: 90%; }
+
+.titleAbout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 40px;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  margin-top: 1rem; }
+
+.contentAbout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  margin-top: 1rem;
+  border: 1px solid black;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5); }
+
+.text {
+  text-align: left;
+  padding: 10px;
+  width: 40%;
+  font-size: 18px;
+  font-weight: bold;
+  word-wrap: break-word;
+  margin: 0px; }
+
+.imgMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: 70%;
+  -webkit-box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.projects {
+  width: 90%; }
+
+.projCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  main .about {
-    padding: 20px; }
-    main .about .titleAbout {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      font-size: 40px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid black; }
-    main .about .contentAbout {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      padding: 10px;
-      height: 245.70;
-      margin-top: 10px;
-      border: 1px solid black;
-      background-color: #E6E6E6;
-      -webkit-box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5);
-              box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5); }
-      main .about .contentAbout .text {
-        text-align: left;
-        padding: 10px;
-        width: 40%;
-        font-size: 18px;
-        font-weight: bold;
-        word-wrap: break-word; }
-      main .about .contentAbout .imgMe {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        width: 50%;
-        height: 60%;
-        -webkit-box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-                box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-        -webkit-transition: 0.5s;
-        transition: 0.5s; }
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.titleProj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 40px;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  margin-top: 5rem; }
+
+.storyGame, .cardGame, .frogger, .jasmine, .universe, .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 35rem;
+  height: 20rem;
+  margin-top: 1rem; }
+
+.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
+  width: 40%;
+  height: 100%;
+  border: 2px solid black;
+  background-color: purple;
+  -webkit-transition: 1s;
+  transition: 1s; }
+
+.storyImage:hover, .cardImage:hover, .froggerImage:hover, .jasmineImage:hover, .universeImage:hover, .formImage:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
+          box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75); }
+
+.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  height: 100%; }
+
+.storyText, .cardText, .froggerText, .jasmineText, .universeText, .formText {
+  font-size: 18px; }
+
+.experience {
+  width: 90%; }
+
+.expCont {
+  width: 100%; }
+
+.titleExp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 40px;
+  padding: 20px;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  margin-top: 5rem; }
+
+.expCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  margin-top: 1rem;
+  border: 1px solid black;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5); }
+
+.expText {
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  word-wrap: break-word;
+  margin: 0px; }
