@@ -10,13 +10,11 @@
 	.storyGame, .cardGame, .frogger, .jasmine, .universe, .form {
 		display: flex;
 		flex-direction: column;
-		width: 30rem;
-		height: 35rem;
+		width: 25rem;
+		height: 34rem;
 	}
 	.memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
-		object-fit: contain;
-		width: 102%;
-		transform: scale(1);
+		height: 100%;
 	}
 	.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
 		width: 100%;
@@ -27,7 +25,7 @@
 		height: 40%;
 	}
 	header {
-		height: 15vh;
+		height: 20vh;
 	}
 }
 
@@ -45,7 +43,7 @@
 	}
 	.intro {
 		padding-right: 1rem;
-		padding-top: 0px;
+		padding-top: 1rem;
 		height: 50%;
 	}
 	.mainTitle {
@@ -73,5 +71,9 @@
 		border: none;
 		box-shadow: none;
 		justify-content: center;
+	}
+	.listAbout[active=""], .listProj[active=""], .listExp[active=""] {
+		background-color: rgba(255, 255, 255, 0.75);
+		color: black;
 	}
 }

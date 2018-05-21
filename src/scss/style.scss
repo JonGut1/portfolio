@@ -30,6 +30,7 @@ header {
 		padding-right: 100px;
 		width: 100%;
 		color: white;
+		height: 70%;
 
 }
 		.mainTitle {
@@ -48,8 +49,16 @@ header {
 	.navBar {
 		color: white;
 		width: 100%;
+		height: 30%;
 		font-size: 20px;
 		border-top: 2px solid white;
+	}
+
+	.navBar[active=""] {
+		position: fixed;
+		top: 0;
+		height: 8vh;
+		background-color: #2E2E2E;
 	}
 
 	.uList {
@@ -60,6 +69,11 @@ header {
 		height: 100%;
 		padding: 0px;
 		margin: 0px;
+	}
+
+	.listAbout[active=""], .listProj[active=""], .listExp[active=""] {
+		background-color: rgba(255, 255, 255, 0.75);
+		color: black;
 	}
 
 	.listAbout, .listProj, .listExp {
@@ -158,74 +172,90 @@ main {
 			.storyGame, .cardGame, .frogger, .jasmine, .universe, .form {
 				display: flex;
 				flex-direction: row;
-				width: 40rem;
-				height: 20rem;
+				width: 50rem;
+				height: 20.3rem;
 				margin-top: 1rem;
 			}
 
 			.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
-				width: 60%;
+				width: 47%;
 				height: 100%;
 				border: 2px solid black;
+				border-radius: 10px;
+				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
 				transition: 1s;
-    			object-fit: cover;
     			overflow: hidden;
 
 			}
 
 			.memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
-				object-fit: contain;
-				width: 102%;
-				transform: scale(1);
+				height: 100%;
 				position: relative;
 				z-index: -1;
 			}
 
 			.cardImage:hover .check {
-				transition: 1s;
+				transition: 0.5s;
 				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
 				transform: translateY(-20rem);
 			}
 			.froggerImage:hover .check {
-				transition: 1s;
+				transition: 0.5s;
 				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
 				transform: translateY(-20rem);
 			}
 			.jasmineImage:hover .check {
-				transition: 1s;
+				transition: 0.5s;
 				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
 				transform: translateY(-20rem);
 			}
 			.universeImage:hover .check {
-				transition: 1s;
+				transition: 0.5s;
 				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
 				transform: translateY(-20rem);
 			}
 			.formImage:hover .check {
-				transition: 1s;
+				transition: 0.5s;
 				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
 				transform: translateY(-20rem);
 			}
 
 			.storyImage:hover .check {
-				transition: 1s;
+				transition: 0.5s;
 				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
 				transform: translateY(-20rem);
 			}
 
 
 			.check {
+				display: flex;
+				flex-direction: column;
 				width: 100%;
 				height: 100%;
-				position: relative;
-				z-index: 2;
-				font-size: 40px;
-				transition: 1s;
+				font-size: 20px;
+				transition: 0.5s;
 			}
 
 			.check:hover {
 				transform: translateY(-20rem);
 				transition: 1s;
+			}
+
+			.demo, .repo {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				height: 50%;
+				transition: 0.5s;
+				color: black;
+				text-underline-position: none;
+			}
+
+			.demo:hover, .repo:hover {
+				cursor: pointer;
+				background-color: #CEF6CE;
+				transition: 0.5s;
 			}
 
 			.commingSoon {
@@ -236,7 +266,7 @@ main {
 			.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
 				display: flex;
 				justify-content: center;
-				width: 40%;
+				width: 53%;
 				height: 100%;
 			}
 
@@ -297,7 +327,6 @@ main {
 			}
 
 			.sideMenu {
-				display: none;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
@@ -308,9 +337,10 @@ main {
 				background-color: #2E2E2E;
 				border: 1px solid black;
 				left: 0;
+				transition: 0.5s;
 			}
 
-			.menuHidden {
+			.menuHidden .sideMenu{
 				transform: translateX(-15em);
 				transition: 0.5s;
 			}

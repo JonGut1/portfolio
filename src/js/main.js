@@ -1,8 +1,12 @@
 const click = document.querySelector('.uList');
 console.log(click);
+const clicks = click.children;
+const sideClicks = document.querySelector('.sideMenuUl').children;
 const main = document.querySelector('main').children;
 console.log(main);
 const side = document.querySelector('.sideMenu');
+const mainName = document.querySelector('main');
+
 click.addEventListener('click', function(ev) {
 	if (ev.target.className === "listAbout") {
 		for (let i = 1; i < main.length; i++) {
@@ -22,6 +26,14 @@ click.addEventListener('click', function(ev) {
 			main[i].style.display = "none";
 		}
 		main[3].style.display = "block";
+	}
+	if (ev.target.className === "listAbout" || ev.target.className === "listProj"
+		|| ev.target.className === "listExp") {
+		for (let i = 0; i < clicks.length; i++) {
+			clicks[i].removeAttribute("active", "");
+		}
+		window.scrollTo(0, 0);
+		ev.target.setAttribute("active", "");
 	}
 });
 side.addEventListener('click', function(ev) {
@@ -45,16 +57,31 @@ side.addEventListener('click', function(ev) {
 	}
 	if (ev.target.className === "listAbout" || ev.target.className === "listProj"
 		|| ev.target.className === "listExp") {
-		side.className = "menuHidden sideMenu";
+		for (let i = 0; i < sideClicks.length; i++) {
+			sideClicks[i].removeAttribute("active", "");
+		}
+		window.scrollTo(0, 0);
+		ev.target.setAttribute("active", "");
+		mainName.className = "menuHidden content";
 	}
 });
 const hambu = document.querySelector('.menuButton');
 
 hambu.addEventListener('click', function() {
-	if (side.className === "menuHidden sideMenu") {
+	if (mainName.className === "menuHidden content") {
 		console.log(side);
-		side.className = "sideMenu";
+		mainName.className = "content";
 	} else {
-		side.className = "menuHidden sideMenu";
+		mainName.className = "menuHidden content";
+	}
+});
+const nav = document.querySelector('.navBar');
+	const navOff = nav.offsetTop;
+window.addEventListener('scroll', function(e) {
+	console.log(window.pageYOffset);
+	if (window.pageYOffset >= navOff) {
+		nav.setAttribute("active", "");
+	} else {
+		nav.removeAttribute("active", "");
 	}
 });

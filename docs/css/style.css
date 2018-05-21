@@ -36,7 +36,8 @@ header {
   padding-top: 20px;
   padding-right: 100px;
   width: 100%;
-  color: white; }
+  color: white;
+  height: 70%; }
 
 .mainTitle {
   font-size: 40px;
@@ -60,8 +61,15 @@ header {
 .navBar {
   color: white;
   width: 100%;
+  height: 30%;
   font-size: 20px;
   border-top: 2px solid white; }
+
+.navBar[active=""] {
+  position: fixed;
+  top: 0;
+  height: 8vh;
+  background-color: #2E2E2E; }
 
 .uList {
   display: -webkit-box;
@@ -76,6 +84,10 @@ header {
   height: 100%;
   padding: 0px;
   margin: 0px; }
+
+.listAbout[active=""], .listProj[active=""], .listExp[active=""] {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: black; }
 
 .listAbout, .listProj, .listExp {
   display: -webkit-box;
@@ -210,35 +222,31 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 40rem;
-  height: 20rem;
+  width: 50rem;
+  height: 20.3rem;
   margin-top: 1rem; }
 
 .storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
-  width: 60%;
+  width: 47%;
   height: 100%;
   border: 2px solid black;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.75);
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s;
-  -o-object-fit: cover;
-     object-fit: cover;
   overflow: hidden; }
 
 .memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 102%;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  height: 100%;
   position: relative;
   z-index: -1; }
 
 .cardImage:hover .check {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
           box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
   -webkit-transform: translateY(-20rem);
@@ -246,9 +254,9 @@ main {
           transform: translateY(-20rem); }
 
 .froggerImage:hover .check {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
           box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
   -webkit-transform: translateY(-20rem);
@@ -256,9 +264,9 @@ main {
           transform: translateY(-20rem); }
 
 .jasmineImage:hover .check {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
           box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
   -webkit-transform: translateY(-20rem);
@@ -266,9 +274,9 @@ main {
           transform: translateY(-20rem); }
 
 .universeImage:hover .check {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
           box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
   -webkit-transform: translateY(-20rem);
@@ -276,9 +284,9 @@ main {
           transform: translateY(-20rem); }
 
 .formImage:hover .check {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
           box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
   -webkit-transform: translateY(-20rem);
@@ -286,9 +294,9 @@ main {
           transform: translateY(-20rem); }
 
 .storyImage:hover .check {
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
   -webkit-box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
           box-shadow: inset 0px -600px 0px 0px rgba(255, 255, 255, 0.75);
   -webkit-transform: translateY(-20rem);
@@ -296,14 +304,19 @@ main {
           transform: translateY(-20rem); }
 
 .check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 100%;
-  position: relative;
-  z-index: 2;
-  font-size: 40px;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
+  font-size: 20px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
 
 .check:hover {
   -webkit-transform: translateY(-20rem);
@@ -312,6 +325,31 @@ main {
   -webkit-transition: 1s;
   -o-transition: 1s;
   transition: 1s; }
+
+.demo, .repo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: black;
+  text-underline-position: none; }
+
+.demo:hover, .repo:hover {
+  cursor: pointer;
+  background-color: #CEF6CE;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
 
 .commingSoon {
   width: 100%;
@@ -324,7 +362,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40%;
+  width: 53%;
   height: 100%; }
 
 .storyText, .cardText, .froggerText, .jasmineText, .universeText, .formText {
@@ -392,7 +430,6 @@ footer {
   background-color: #2E2E2E; }
 
 .sideMenu {
-  display: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -409,9 +446,12 @@ footer {
   height: 25rem;
   background-color: #2E2E2E;
   border: 1px solid black;
-  left: 0; }
+  left: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
 
-.menuHidden {
+.menuHidden .sideMenu {
   -webkit-transform: translateX(-15em);
       -ms-transform: translateX(-15em);
           transform: translateX(-15em);

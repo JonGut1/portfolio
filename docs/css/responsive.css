@@ -13,15 +13,10 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 30rem;
-    height: 35rem; }
+    width: 25rem;
+    height: 34rem; }
   .memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
-    -o-object-fit: contain;
-       object-fit: contain;
-    width: 102%;
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1); }
+    height: 100%; }
   .storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
     width: 100%;
     height: 60%; }
@@ -29,7 +24,7 @@
     width: 100%;
     height: 40%; }
   header {
-    height: 15vh; } }
+    height: 20vh; } }
 
 @media screen and (max-width: 700px) {
   .sideMenu {
@@ -46,7 +41,7 @@
     border-top: 1px solid white; }
   .intro {
     padding-right: 1rem;
-    padding-top: 0px;
+    padding-top: 1rem;
     height: 50%; }
   .mainTitle {
     font-size: 18px; }
@@ -71,4 +66,7 @@
             box-shadow: none;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; } }
+            justify-content: center; }
+  .listAbout[active=""], .listProj[active=""], .listExp[active=""] {
+    background-color: rgba(255, 255, 255, 0.75);
+    color: black; } }
