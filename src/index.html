@@ -4,6 +4,7 @@
 	<title>Portfolio</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -13,16 +14,25 @@
 			<span class="mainTitle">Jonas</span>
 			<span class="titleDesc">Front-End Developer</span>
 		</div>
-
 		<nav class="navBar">
+			<button class="menuButton">
+				<span class="glyphicon glyphicon-menu-hamburger"></span>
+			</button>
 			<ul class="uList">
-				<li class="list">About</li>
-				<li class="list">Projects</li>
-				<li class="list">Experience</li>
+				<li class="listAbout">About</li>
+				<li class="listProj">Projects</li>
+				<li class="listExp">Experience</li>
 			</ul>
 		</nav>
 	</header>
 	<main class="content">
+		<aside class="menuHidden sideMenu">
+			<ul class="sideMenuUl">
+				<li class="listAbout">About</li>
+				<li class="listProj">Projects</li>
+				<li class="listExp">Experience</li>
+			</ul>
+		</aside>
 		<section class="about">
 			<span class="titleAbout">About</span>
 			<div class="contentAbout">
@@ -37,7 +47,8 @@
 			<div class="projCont">
 				<div class="storyGame">
 					<div class="storyImage">
-						img
+						<img class="storyIMG" src="img/story-game.png">
+						<div class="check"><span>text</span></div>
 					</div>
 					<div class="storyDesc">
 						<span class="storyText">aaaa</span>
@@ -45,7 +56,8 @@
 				</div>
 				<div class="cardGame">
 					<div class="cardImage">
-						img
+						<img class="memory-gameIMG" src="img/memory-game.png">
+						<div class="check"><span>text</span></div>
 					</div>
 					<div class="cardDesc">
 						<span class="cardText">aaaa</span>
@@ -53,7 +65,8 @@
 				</div>
 				<div class="frogger">
 					<div class="froggerImage">
-						img
+						<img class="froggerIMG" src="img/frogger-clone.png">
+						<div class="check"><span>text</span></div>
 					</div>
 					<div class="froggerDesc">
 						<span class="froggerText">aaaa</span>
@@ -61,7 +74,8 @@
 				</div>
 				<div class="jasmine">
 					<div class="jasmineImage">
-						img
+						<img class="jasmineIMG" src="img/jasmine.png">
+						<div class="check"><span>text</span></div>
 					</div>
 					<div class="jasmineDesc">
 						<span class="jasmineText">aaaa</span>
@@ -69,7 +83,8 @@
 				</div>
 				<div class="universe">
 					<div class="universeImage">
-						img
+						<img class="universeIMG" src="img/universe-game.png">
+						<div class="check"><span>text</span></div>
 					</div>
 					<div class="universeDesc">
 						<span class="universeText">aaaa</span>
@@ -77,14 +92,14 @@
 				</div>
 				<div class="form">
 					<div class="formImage">
-						img
+						<img class="formIMG" src="img/form.png">
+						<div class="check"><span>text</span></div>
 					</div>
 					<div class="formDesc">
 						<span class="formText">aaaa</span>
 					</div>
 				</div>
 			</div>
-
 		</section>
 		<section class="experience">
 			<span class="titleExp">Experience</span>
@@ -93,6 +108,9 @@
 			</div>
 		</section>
 	</main>
+		<footer class="footer">
+
+		</footer>
 <script src="js/main.js"></script>
 </body>
 </html>

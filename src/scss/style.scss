@@ -2,10 +2,16 @@ header {
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	margin: 0px;
 	background-color: #D8D8D8;
 	width: 100%;
+	min-height:100%;
+  	position:relative;
 }
 
 header {
@@ -15,6 +21,7 @@ header {
 	width: 100%;
 	height: 25vh;
 	background-color: #2E2E2E;
+}
 
 	.intro {
 		display: flex;
@@ -24,7 +31,7 @@ header {
 		width: 100%;
 		color: white;
 
-
+}
 		.mainTitle {
 		font-size: 40px;
 		display: flex;
@@ -37,7 +44,6 @@ header {
 			justify-content: flex-end;
 			margin-top: 10px;
 		}
-	}
 
 	.navBar {
 		color: white;
@@ -56,7 +62,7 @@ header {
 		margin: 0px;
 	}
 
-	.list {
+	.listAbout, .listProj, .listExp {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -65,13 +71,13 @@ header {
 		transition: 0.5s;
 	}
 
-	.list:hover {
+	.listAbout:hover, .listProj:hover, .listExp:hover {
 		cursor: pointer;
 		transition: 0.5s;
 		color: black;
 		box-shadow: inset 0px 100px 0px 0px rgba(255,255,255,0.75);
 	}
-}
+
 
 main {
 	display: flex;
@@ -82,6 +88,7 @@ main {
 
 	.about {
 		width: 90%;
+		margin-bottom: 15rem;
 	}
 
 
@@ -127,7 +134,8 @@ main {
 
 			.projects {
 				width: 90%;
-
+				display: none;
+				margin-bottom: 15rem;
 			}
 
 			.projCont {
@@ -144,34 +152,91 @@ main {
 				padding: 20px;
 				border-bottom: 2px solid black;
 				border-top: 2px solid black;
-				margin-top: 5rem;
+				margin-top: 1rem;
 			}
 
 			.storyGame, .cardGame, .frogger, .jasmine, .universe, .form {
 				display: flex;
 				flex-direction: row;
-				width: 35rem;
+				width: 40rem;
 				height: 20rem;
 				margin-top: 1rem;
 			}
 
 			.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
-				width: 40%;
+				width: 60%;
 				height: 100%;
 				border: 2px solid black;
-				background-color: purple;
+				transition: 1s;
+    			object-fit: cover;
+    			overflow: hidden;
+
+			}
+
+			.memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
+				object-fit: contain;
+				width: 102%;
+				transform: scale(1);
+				position: relative;
+				z-index: -1;
+			}
+
+			.cardImage:hover .check {
+				transition: 1s;
+				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
+				transform: translateY(-20rem);
+			}
+			.froggerImage:hover .check {
+				transition: 1s;
+				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
+				transform: translateY(-20rem);
+			}
+			.jasmineImage:hover .check {
+				transition: 1s;
+				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
+				transform: translateY(-20rem);
+			}
+			.universeImage:hover .check {
+				transition: 1s;
+				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
+				transform: translateY(-20rem);
+			}
+			.formImage:hover .check {
+				transition: 1s;
+				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
+				transform: translateY(-20rem);
+			}
+
+			.storyImage:hover .check {
+				transition: 1s;
+				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
+				transform: translateY(-20rem);
+			}
+
+
+			.check {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 2;
+				font-size: 40px;
 				transition: 1s;
 			}
 
-			.storyImage:hover, .cardImage:hover, .froggerImage:hover, .jasmineImage:hover, .universeImage:hover, .formImage:hover {
+			.check:hover {
+				transform: translateY(-20rem);
 				transition: 1s;
-				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
+			}
+
+			.commingSoon {
+				width: 100%;
+				height: 100%;
 			}
 
 			.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
 				display: flex;
 				justify-content: center;
-				width: 60%;
+				width: 40%;
 				height: 100%;
 			}
 
@@ -181,6 +246,8 @@ main {
 
 			.experience {
 				width: 90%;
+				display: none;
+				margin-bottom: 15rem;
 			}
 
 			.expCont {
@@ -194,7 +261,7 @@ main {
 				padding: 20px;
 				border-bottom: 2px solid black;
 				border-top: 2px solid black;
-				margin-top: 5rem;
+				margin-top: 1rem;
 			}
 
 			.expCont {
@@ -216,6 +283,75 @@ main {
 				font-weight: bold;
 				word-wrap: break-word;
 				margin: 0px;
+			}
+
+			footer {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				height: 8vh;
+				background-color: #2E2E2E;
+			}
+
+			.sideMenu {
+				display: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				width: 20rem;
+				height: 25rem;
+				background-color: #2E2E2E;
+				border: 1px solid black;
+				left: 0;
+			}
+
+			.menuHidden {
+				transform: translateX(-15em);
+				transition: 0.5s;
+			}
+
+			.sideMenuUl {
+				list-style-type: none;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding-left: 0px;
+				transition: 1s;
+			}
+
+			.sideMenuUl {
+				.listAbout, .listProj, .listExp {
+					color: white;
+					background-color: #424242;
+					font-size: 20px;
+					margin-top: 2rem;
+					width: 100%;
+					height: 3rem;
+				}
+			}
+
+			.menuButton {
+				background-color: #2E2E2E;
+				border: none;
+				width: 2rem;
+				height: 2rem;
+				padding: 0px;
+				margin-left: 1rem;
+				display: flex;
+				align-items: center;
+				display: none;
+				margin-top: 1rem;
+			}
+
+			.glyphicon-menu-hamburger {
+				color: white;
+				width: 100%;
+				font-size: 2.2rem;
 			}
 
 
