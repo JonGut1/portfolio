@@ -77,11 +77,18 @@ hambu.addEventListener('click', function () {
 });
 var nav = document.querySelector('.navBar');
 var navOff = nav.offsetTop;
+var sideMenu = document.querySelector('.sideMenu');
+var sideOff = sideMenu.offsetTop;
 window.addEventListener('scroll', function (e) {
 	console.log(window.pageYOffset);
 	if (window.pageYOffset >= navOff) {
 		nav.setAttribute("active", "");
 	} else {
 		nav.removeAttribute("active", "");
+	}
+	if (window.pageYOffset >= sideOff - 53) {
+		sideMenu.setAttribute("active", "");
+	} else {
+		sideMenu.removeAttribute("active", "");
 	}
 });

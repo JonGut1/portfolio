@@ -13,7 +13,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 25rem;
+    width: 24rem;
     height: 34rem; }
   .memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
     height: 100%; }
@@ -22,11 +22,11 @@
     height: 60%; }
   .storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
     width: 100%;
-    height: 40%; }
-  header {
-    height: 20vh; } }
+    height: 40%; } }
 
 @media screen and (max-width: 700px) {
+  header {
+    height: 8em; }
   .sideMenu {
     display: block;
     -webkit-transition: 0.5s;
@@ -34,7 +34,10 @@
     transition: 0.5s; }
   .uList {
     display: none; }
+  .intro {
+    height: 60%; }
   .navBar {
+    height: 40%;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -69,4 +72,17 @@
             justify-content: center; }
   .listAbout[active=""], .listProj[active=""], .listExp[active=""] {
     background-color: rgba(255, 255, 255, 0.75);
-    color: black; } }
+    color: black; }
+  .navBar[active=""] {
+    height: 8vh; } }
+
+@media screen and (max-width: 375px) and (max-height: 812px) {
+  header {
+    height: 17vh; }
+  .intro {
+    height: 56%; }
+  .navBar {
+    padding-top: 5px;
+    height: 44%; }
+  .navBar[active=""] {
+    height: 3.3em; } }

@@ -76,12 +76,19 @@ hambu.addEventListener('click', function() {
 	}
 });
 const nav = document.querySelector('.navBar');
-	const navOff = nav.offsetTop;
+const navOff = nav.offsetTop;
+const sideMenu = document.querySelector('.sideMenu');
+const sideOff = sideMenu.offsetTop;
 window.addEventListener('scroll', function(e) {
 	console.log(window.pageYOffset);
 	if (window.pageYOffset >= navOff) {
 		nav.setAttribute("active", "");
 	} else {
 		nav.removeAttribute("active", "");
+	}
+	if (window.pageYOffset >= sideOff - 53) {
+		sideMenu.setAttribute("active", "");
+	} else {
+		sideMenu.removeAttribute("active", "");
 	}
 });
