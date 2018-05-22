@@ -55,8 +55,7 @@ header {
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-top: 10px; }
+          justify-content: flex-end; }
 
 .navBar {
   margin: 0;
@@ -138,9 +137,8 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 40px;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 2px solid black;
-  border-top: 2px solid black;
   margin-top: 1rem; }
 
 .contentAbout {
@@ -161,8 +159,10 @@ main {
 
 .text {
   text-align: left;
-  padding: 10px;
-  width: 40%;
+  padding-top: 1em;
+  padding-left: 10em;
+  padding-right: 10em;
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
   word-wrap: break-word;
@@ -200,7 +200,8 @@ main {
           flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 2em; }
 
 .titleProj {
   display: -webkit-box;
@@ -210,9 +211,8 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 40px;
-  padding: 20px;
+  padding: 10px;
   border-bottom: 2px solid black;
-  border-top: 2px solid black;
   margin-top: 1rem; }
 
 .storyGame, .cardGame, .frogger, .jasmine, .universe, .form {
@@ -225,10 +225,10 @@ main {
           flex-direction: row;
   width: 50rem;
   height: 20.3rem;
-  margin-top: 1rem;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.5s; }
+  transition: 0.5s;
+  border-right: 1px solid black; }
 
 .trans .storyGame, .trans .frogger {
   -webkit-box-orient: vertical;
@@ -241,7 +241,7 @@ main {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.97);
   border-radius: 20px;
   position: fixed;
   left: 5%;
@@ -255,6 +255,7 @@ main {
 .implode {
   width: 50rem;
   height: 20.3rem;
+  margin: 1em;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s; }
@@ -277,10 +278,10 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: auto;
+  text-align: right;
+  padding-top: 2rem;
   height: 5%;
   padding-right: 2rem;
-  padding-top: 2rem;
   font-size: 50px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -297,7 +298,7 @@ main {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.97);
   border-radius: 20px;
   position: fixed;
   top: 5%;
@@ -329,10 +330,14 @@ main {
           box-shadow: none;
   padding: 20px; }
 
-.before {
+.card, .story, .frog, .jasm, .universe, .form {
   width: 50rem;
   height: 20.3rem;
-  margin-top: 1rem; }
+  margin: 1em; }
+
+.before {
+  width: 100%;
+  height: 100%; }
 
 .trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG {
   -webkit-transition: 0s;
@@ -353,6 +358,12 @@ main {
   height: 35%;
   padding: 20px; }
 
+.trans .storyText, .trans .cardText, .trans .froggerText, .trans .jasmineText {
+  font-size: 20px;
+  overflow: auto;
+  padding-left: 3em;
+  padding-right: 3em; }
+
 .storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
   width: 47%;
   height: 100%;
@@ -367,6 +378,9 @@ main {
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s; }
+
+.storyImage:hover, .cardImage:hover, .froggerImage:hover, .jasmineImage:hover {
+  cursor: pointer; }
 
 .memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
   height: 100%;
@@ -383,11 +397,11 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 53%;
   height: 100%;
+  padding: 1em;
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s; }
@@ -396,53 +410,31 @@ main {
   font-size: 18px;
   -webkit-transition: 0s;
   -o-transition: 0s;
-  transition: 0s; }
-
-.experience {
-  width: 90%;
-  display: none;
-  margin-bottom: 15rem; }
-
-.expCont {
-  width: 100%; }
-
-.titleExp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 40px;
-  padding: 20px;
-  border-bottom: 2px solid black;
-  border-top: 2px solid black;
-  margin-top: 1rem; }
-
-.expCont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px;
-  margin-top: 1rem;
-  border: 1px solid black;
-  background-color: #E6E6E6;
-  -webkit-box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 20px 30px 15px rgba(0, 0, 0, 0.5); }
-
-.expText {
-  text-align: left;
-  padding: 10px;
+  transition: 0s;
   width: 100%;
-  font-size: 18px;
-  font-weight: bold;
-  word-wrap: break-word;
-  margin: 0px; }
+  height: 80%;
+  overflow: hidden; }
+
+.universeText, .formText {
+  overflow: auto;
+  height: 100%; }
+
+.extra {
+  width: 100%;
+  height: 20%;
+  text-align: center; }
+
+.more, .repo, .demo {
+  height: 100%;
+  width: 30%;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin: 0px;
+  font-size: 16px; }
+
+.more:hover, .repo:hover, .demo:hover {
+  cursor: pointer;
+  color: black; }
 
 footer {
   display: -webkit-box;
@@ -477,9 +469,9 @@ footer {
   background-color: #2E2E2E;
   border: 1px solid black;
   left: 0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
 
 .sideMenu[active=""] {
   position: fixed;
@@ -489,9 +481,9 @@ footer {
   -webkit-transform: translateX(-15em);
       -ms-transform: translateX(-15em);
           transform: translateX(-15em);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
 
 .sideMenuUl {
   list-style-type: none;
@@ -506,17 +498,17 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding-left: 0px;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  height: 100%; }
 
-.sideMenuUl .listAbout, .sideMenuUl .listProj, .sideMenuUl .listExp {
+.sideMenuUl .listAbout, .sideMenuUl .listProj {
   color: white;
   background-color: #424242;
   font-size: 20px;
-  margin-top: 2rem;
   width: 100%;
-  height: 3rem; }
+  height: 50%; }
 
 .menuButton {
   background-color: #2E2E2E;
