@@ -73,7 +73,7 @@ header {
 	}
 
 	.listAbout[active=""], .listProj[active=""], .listExp[active=""] {
-		background-color: rgba(255, 255, 255, 0.75);
+		background-color: rgba(255, 255, 255, 1);
 		color: black;
 	}
 
@@ -176,6 +176,98 @@ main {
 				width: 50rem;
 				height: 20.3rem;
 				margin-top: 1rem;
+				transition: 0.5s;
+			}
+
+			.trans .storyGame, .trans .frogger {
+				flex-direction: column;
+				justify-content: center;
+				transition: 0.5s;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 20px;
+				position: fixed;
+				left: 5%;
+				top: 5%;
+				bottom: 5%;
+				z-index: 2;
+				margin: auto;
+				width: 90%;
+				height: 90%;
+			}
+
+			.implode {
+				width: 50rem;
+				height: 20.3rem;
+				transition: 0s;
+			}
+
+			.implode .storyIMG {
+				height: 100%;
+				position: relative;
+				z-index: -1;
+				transition: 0s;
+			}
+
+			.glyph {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				margin-left: auto;
+				height: 5%;
+				padding-right: 2rem;
+				padding-top: 2rem;
+				font-size: 50px;
+				transition: 0.5s;
+			}
+
+			.trans .cardGame, .trans .jasmine {
+				flex-direction: column;
+				justify-content: center;
+				transition: 0.5s;
+				background-color: rgba(255, 255, 255, 0.9);
+				border-radius: 20px;
+				position: fixed;
+				top: 5%;
+				bottom: 5%;
+				right: 5%;
+				z-index: 2;
+				margin: auto;
+				width: 90%;
+				height: 90%;
+			}
+
+			.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage {
+				transition: 0s;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				height: 60%;
+				border: none;
+				box-shadow: none;
+				padding: 20px;
+			}
+
+			.before {
+				width: 50rem;
+				height: 20.3rem;
+				margin-top: 1rem;
+			}
+
+			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG {
+				transition: 0s;
+				margin-left: auto;
+				margin-right: auto;
+				border: 2px solid black;
+				border-radius: 10px;
+				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+			}
+
+			.trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc {
+				transition: 0s;
+				width: 100%;
+				height: 35%;
+				padding: 20px;
 			}
 
 			.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
@@ -186,6 +278,7 @@ main {
 				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
 				transition: 1s;
     			overflow: hidden;
+    			transition: 0s;
 
 			}
 
@@ -193,75 +286,11 @@ main {
 				height: 100%;
 				position: relative;
 				z-index: -1;
+				transition: 0s;
 			}
 
-			.cardImage:hover .check {
-				transition: 0.5s;
-				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
-				transform: translateY(-20rem);
-			}
-			.froggerImage:hover .check {
-				transition: 0.5s;
-				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
-				transform: translateY(-20rem);
-			}
-			.jasmineImage:hover .check {
-				transition: 0.5s;
-				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
-				transform: translateY(-20rem);
-			}
-			.universeImage:hover .check {
-				transition: 0.5s;
-				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
-				transform: translateY(-20rem);
-			}
-			.formImage:hover .check {
-				transition: 0.5s;
-				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
-				transform: translateY(-20rem);
-			}
-
-			.storyImage:hover .check {
-				transition: 0.5s;
-				box-shadow: inset 0px -600px 0px 0px rgba(255,255,255,0.75);
-				transform: translateY(-20rem);
-			}
-
-
-			.check {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-				height: 100%;
-				font-size: 20px;
-				transition: 0.5s;
-			}
-
-			.check:hover {
-				transform: translateY(-20rem);
-				transition: 1s;
-			}
-
-			.demo, .repo {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 50%;
-				transition: 0.5s;
-				color: black;
-				text-underline-position: none;
-			}
-
-			.demo:hover, .repo:hover {
-				cursor: pointer;
-				background-color: #CEF6CE;
-				transition: 0.5s;
-			}
-
-			.commingSoon {
-				width: 100%;
-				height: 100%;
+			.formImage, .universeImage {
+				background-color: rgba(255, 255, 255, 0.75);
 			}
 
 			.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
@@ -269,10 +298,12 @@ main {
 				justify-content: center;
 				width: 53%;
 				height: 100%;
+				transition: 0s;
 			}
 
 			.storyText, .cardText, .froggerText, .jasmineText, .universeText, .formText {
 				font-size: 18px;
+				transition: 0s;
 			}
 
 			.experience {
