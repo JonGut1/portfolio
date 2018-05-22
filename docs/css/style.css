@@ -86,11 +86,11 @@ header {
   padding: 0px;
   margin: 0px; }
 
-.listAbout[active=""], .listProj[active=""], .listExp[active=""] {
+.listAbout[active=""], .listProj[active=""] {
   background-color: white;
   color: black; }
 
-.listAbout, .listProj, .listExp {
+.listAbout, .listProj {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +100,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 33.33333333333333333%;
+  width: 50%;
   margin: 0px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
