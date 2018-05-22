@@ -5,7 +5,6 @@ console.log(click);
 var clicks = click.children;
 var sideClicks = document.querySelector('.sideMenuUl').children;
 var main = document.querySelector('main').children;
-console.log(main);
 var side = document.querySelector('.sideMenu');
 var mainName = document.querySelector('main');
 
@@ -14,7 +13,6 @@ click.addEventListener('click', function (ev) {
 		if (ev.target.className === "listAbout") {
 			for (var i = 1; i < main.length; i++) {
 				main[i].style.display = "none";
-				console.log(main);
 			}
 			main[1].style.display = "block";
 		}
@@ -74,7 +72,6 @@ var hambu = document.querySelector('.menuButton');
 hambu.addEventListener('click', function () {
 	if (document.querySelector('.trans') === null) {
 		if (mainName.className === "menuHidden content") {
-			console.log(side);
 			mainName.className = "content";
 		} else {
 			mainName.className = "menuHidden content";
@@ -86,7 +83,6 @@ var navOff = nav.offsetTop;
 var sideMenu = document.querySelector('.sideMenu');
 var sideOff = sideMenu.offsetTop;
 window.addEventListener('scroll', function (e) {
-	console.log(window.pageYOffset);
 	if (window.pageYOffset >= navOff) {
 		nav.setAttribute("active", "");
 	} else {
@@ -112,12 +108,23 @@ var contArr = {
 	froggerImage: 'frog',
 	jasmineImage: 'jasm'
 };
+var expand = document.querySelectorAll('.more');
 var projects = document.querySelector('.projects');
 projects.addEventListener('click', modalClick);
+projects.addEventListener('click', more);
+
+function more(el) {
+	if (el.target.className === "more") {
+		var naming = el.target.parentElement.parentElement.parentElement.children[0];
+		el.target.style.visibility = "hidden";
+		naming.click();
+	}
+}
 
 function modalClick(e) {
 	if (document.querySelector('.trans') === null) {
 		if (contArr[e.target.className] != undefined) {
+			e.target.parentElement.children[1].children[1].children[2].style.visibility = "hidden";
 			var before = document.createElement('div');
 			before.classList.add('before');
 			var container = document.querySelector('.' + contArr[e.target.className]);
@@ -131,7 +138,6 @@ function modalClick(e) {
 			if (document.querySelector('.trans') != null) {
 				var button = document.createElement('div');
 				button.className = 'glyph glyphicon glyphicon-remove';
-				console.log(container.children[1]);
 				if (document.querySelector('.glyph') === null) {
 					container.children[1].insertBefore(button, container.children[1].children[0]);
 				}
@@ -139,6 +145,9 @@ function modalClick(e) {
 					container.className = "implode";
 					before.remove();
 					button.remove();
+					expand.forEach(function (exp) {
+						exp.style.visibility = "visible";
+					});
 					setTimeout(function () {
 						container.className = contArr[e.target.className];
 					}, 500);
