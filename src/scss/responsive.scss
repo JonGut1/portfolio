@@ -307,8 +307,13 @@
 }
 @media screen and (max-width: 390px) {
 .trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				height: auto;
-				width: 90%;
+				height: 90%;
+				width: auto;
+				box-shadow: none;
+			}
+			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
+				height: 90%;
+				width: auto;
 				box-shadow: none;
 			}
 }
@@ -352,12 +357,12 @@
 	}
 	.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
 				padding: 10px;
-				height: 50%;
+				height: 30%;
 
 			}
 .trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
 				width: 100%;
-				height: 50%;
+				height: 70%;
 			}
 
 
@@ -385,24 +390,24 @@
 			}
 	.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
 				padding: 10px;
-				height: 50%;
+				height: 30%;
 
 			}
 .transTr .storyDesc, .transTr .cardDesc, .transTr .froggerDesc, .transTr .jasmineDesc, .transTr .universeDesc, .transTr .formDesc {
 				width: 100%;
-				height: 50%;
+				height: 70%;
 			}
 			.trans .coming {
 				font-size: 20px;
 			}
 			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				height: auto;
-				width: 20%;
+				height: 100%;
+				width: auto;
 				box-shadow: none;
 			}
 			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
-				height: auto;
-				width: 20%;
+				height: 100%;
+				width: auto;
 				box-shadow: none;
 			}
 }
