@@ -310,6 +310,8 @@ main {
 			}
 			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
 				transition: 0s;
+				margin-left: 30%;
+				margin-right: 30%;
 				border: 2px solid black;
 				border-radius: 10px;
 				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
