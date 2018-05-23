@@ -106,7 +106,9 @@ var contArr = {
 	storyImage: 'story',
 	cardImage: 'card',
 	froggerImage: 'frog',
-	jasmineImage: 'jasm'
+	jasmineImage: 'jasm',
+	universeImage: 'univ',
+	formImage: 'for'
 };
 var expand = document.querySelectorAll('.more');
 var projects = document.querySelector('.projects');
@@ -123,6 +125,9 @@ function more(el) {
 
 function modalClick(e) {
 	if (document.querySelector('.trans') === null) {
+		if (e.target.className === "coming") {
+			e.target.parentElement.click();
+		}
 		if (contArr[e.target.className] != undefined) {
 			e.target.parentElement.children[1].children[1].children[2].style.visibility = "hidden";
 			var before = document.createElement('div');
@@ -145,9 +150,8 @@ function modalClick(e) {
 					container.className = "implode";
 					before.remove();
 					button.remove();
-					expand.forEach(function (exp) {
-						exp.style.visibility = "visible";
-					});
+					e.target.parentElement.children[1].children[1].children[2].style.visibility = "visible";
+
 					setTimeout(function () {
 						container.className = contArr[e.target.className];
 					}, 500);

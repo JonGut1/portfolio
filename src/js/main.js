@@ -107,6 +107,8 @@ const contArr = {
 	cardImage: 'card',
 	froggerImage: 'frog',
 	jasmineImage: 'jasm',
+	universeImage: 'univ',
+	formImage: 'for',
 };
 const expand = document.querySelectorAll('.more');
 const projects = document.querySelector('.projects');
@@ -124,6 +126,9 @@ function more(el) {
 
 function modalClick(e) {
 	if(document.querySelector('.trans') === null) {
+		if (e.target.className === "coming") {
+			e.target.parentElement.click();
+		}
 	if (contArr[e.target.className] != undefined) {
 		e.target.parentElement.children[1].children[1].children[2].style.visibility = "hidden";
 		const before = document.createElement('div');
@@ -146,9 +151,8 @@ function modalClick(e) {
 				container.className = "implode";
 				before.remove();
 				button.remove();
-				expand.forEach(function(exp) {
-					exp.style.visibility = "visible";
-				});
+				e.target.parentElement.children[1].children[1].children[2].style.visibility = "visible";
+
 				setTimeout(function() {
 					container.className = contArr[e.target.className];
 				}, 500);
