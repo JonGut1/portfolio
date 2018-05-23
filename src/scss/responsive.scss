@@ -188,11 +188,11 @@
 				top: 3em;
 			}
 	.glyph {
-				font-size: 30px;
+				font-size: 35px;
 				transition: 0.5s;
 				height: 7%;
 				text-align: right;
-				padding-top: 10px;
+				padding-top: 15px;
 				margin: 0px;
 			}
 			.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
@@ -316,6 +316,9 @@
 				width: auto;
 				box-shadow: none;
 			}
+			.text {
+				font-size: 16px;
+			}
 }
 
 @media screen and (max-height: 420px) and (max-width: 825px) {
@@ -353,7 +356,8 @@
 				padding: 0px;
 			}
 			.glyph {
-		font-size: 30px;
+		font-size: 35px;
+		margin-bottom: 0.3em;
 	}
 	.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
 				padding: 10px;
@@ -409,5 +413,17 @@
 				height: 100%;
 				width: auto;
 				box-shadow: none;
+			}
+			.trans .coming {
+				padding-right: 2em;
+				font-size: 12px;
+			}
+			.trans .formImage, .trans .universeImage {
+				position: relative;
+				background-color: rgba(255, 255, 255, 0);
+			}
+			.transTr .formImage, .transTr .universeImage {
+				position: relative;
+				background-color: rgba(255, 255, 255, 0);
 			}
 }
