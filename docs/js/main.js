@@ -148,8 +148,8 @@ function modalClick(e) {
 				}
 				button.addEventListener('click', function () {
 					container.className = "implode";
-					before.remove();
-					button.remove();
+					before.parentElement.removeChild(before);
+					button.parentElement.removeChild(button);
 					e.target.parentElement.children[1].children[1].children[2].style.visibility = "visible";
 
 					setTimeout(function () {

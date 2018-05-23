@@ -13,7 +13,7 @@ gulp.task('styles', function(done) {
 	gulp.src('src/scss/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(autoprefixer({
-		browsers: ['last 5 versions', 'edge >= 10', 'ie >= 9']
+		browsers: ['last 5 versions']
 	}))
 	.pipe(gulp.dest('docs/css'))
 	browserSync.reload();
