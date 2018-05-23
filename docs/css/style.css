@@ -254,10 +254,10 @@ main {
   height: 90%; }
 
 .transTr .storyGame, .transTr .frogger, .transTr .universe {
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -267,9 +267,10 @@ main {
   background-color: rgba(255, 255, 255, 0.97);
   border-radius: 20px;
   position: fixed;
-  left: 5%;
   top: 5%;
   bottom: 5%;
+  left: 5%;
+  right: 5%;
   z-index: 2;
   margin: auto;
   width: 90%;
@@ -325,10 +326,10 @@ main {
   height: 90%; }
 
 .transTr .cardGame, .transTr .jasmine, .transTr .form {
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -340,6 +341,7 @@ main {
   position: fixed;
   top: 5%;
   bottom: 5%;
+  left: 5%;
   right: 5%;
   z-index: 2;
   margin: auto;
@@ -374,15 +376,11 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  height: 58%;
+  width: 50%;
+  height: 100%;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -418,8 +416,8 @@ main {
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
-  margin-left: 30%;
-  margin-right: 30%;
+  width: auto;
+  height: 373px;
   border: 2px solid black;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
@@ -437,8 +435,8 @@ main {
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
-  width: 100%;
-  height: 35%;
+  width: 50%;
+  height: 100%;
   padding: 20px; }
 
 .trans .storyText, .trans .cardText, .trans .froggerText, .trans .jasmineText, .trans .universeText, .trans .formText {
@@ -547,7 +545,7 @@ main {
 
 .transTr .coming {
   width: 100%;
-  height: 100%; }
+  height: 50%; }
 
 .extra {
   width: 100%;

@@ -198,15 +198,16 @@ main {
 			}
 
 			.transTr .storyGame, .transTr .frogger, .transTr .universe {
-				flex-direction: column;
+				flex-direction: row;
 				justify-content: center;
 				transition: 0.5s;
 				background-color: rgba(255, 255, 255, 0.97);
 				border-radius: 20px;
 				position: fixed;
-				left: 5%;
 				top: 5%;
 				bottom: 5%;
+				left: 5%;
+				right: 5%;
 				z-index: 2;
 				margin: auto;
 				width: 90%;
@@ -249,7 +250,7 @@ main {
 			}
 
 			.transTr .cardGame, .transTr .jasmine, .transTr .form  {
-				flex-direction: column;
+				flex-direction: row;
 				justify-content: center;
 				transition: 0.5s;
 				background-color: rgba(255, 255, 255, 0.97);
@@ -257,6 +258,7 @@ main {
 				position: fixed;
 				top: 5%;
 				bottom: 5%;
+				left: 5%;
 				right: 5%;
 				z-index: 2;
 				margin: auto;
@@ -278,10 +280,9 @@ main {
 			.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
 				transition: 0s;
 				display: flex;
-				flex-direction: column;
 				justify-content: center;
-				width: 100%;
-				height: 58%;
+				width: 50%;
+				height: 100%;
 				border: none;
 				box-shadow: none;
 				padding: 20px;
@@ -310,8 +311,8 @@ main {
 			}
 			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
 				transition: 0s;
-				margin-left: 30%;
-				margin-right: 30%;
+				width: auto;
+				height: 373px;
 				border: 2px solid black;
 				border-radius: 10px;
 				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
@@ -324,8 +325,8 @@ main {
 			}
 			.transTr .storyDesc, .transTr .cardDesc, .transTr .froggerDesc, .transTr .jasmineDesc, .transTr .universeDesc, .transTr .formDesc {
 				transition: 0s;
-				width: 100%;
-				height: 35%;
+				width: 50%;
+				height: 100%;
 				padding: 20px;
 			}
 
@@ -427,7 +428,7 @@ main {
 			}
 			.transTr .coming {
 				width: 100%;
-				height: 100%
+				height: 50%
 			}
 
 			.extra {
@@ -545,13 +546,3 @@ main {
 				width: 100%;
 				font-size: 2.2rem;
 			}
-
-
-
-
-
-
-
-
-
-
