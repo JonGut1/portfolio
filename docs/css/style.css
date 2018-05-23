@@ -336,8 +336,14 @@ main {
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
-  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: auto;
+  margin-left: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid black;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
@@ -356,6 +362,14 @@ main {
   overflow: auto;
   padding-left: 3em;
   padding-right: 3em; }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 5px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px; }
 
 .storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
   width: 47%;
@@ -458,14 +472,41 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 30em;
+  padding-right: 30em;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 8vh;
   background-color: #2E2E2E; }
+  footer .gitRepo {
+    color: white;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+  footer .gitRepo:hover {
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
+  footer .email {
+    color: white;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
 
 .sideMenu {
   display: -webkit-box;

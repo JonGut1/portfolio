@@ -257,8 +257,10 @@ main {
 
 			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
 				transition: 0s;
-				margin-left: auto;
+				display: flex;
 				margin-right: auto;
+				margin-left: auto;
+				align-items: center;
 				border: 2px solid black;
 				border-radius: 10px;
 				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
@@ -276,6 +278,15 @@ main {
 				overflow: auto;
 				padding-left: 3em;
 				padding-right: 3em;
+			}
+
+			::-webkit-scrollbar {
+    			-webkit-appearance: none;
+    				width: 5px;
+			}
+			::-webkit-scrollbar-thumb {
+			    background-color: rgba(0, 0, 0, 0.1);
+			    border-radius: 10px;
 			}
 
 			.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
@@ -371,12 +382,31 @@ main {
 			footer {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: center;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				padding-left: 30em;
+				padding-right: 30em;
 				position: absolute;
 				bottom: 0;
 				width: 100%;
 				height: 8vh;
 				background-color: #2E2E2E;
+
+				.gitRepo {
+				color: white;
+				transition: 0.2s;
+				}
+				.gitRepo:hover {
+					transition: 0.2s;
+					cursor: pointer;
+					transform: scale(1.2);
+				}
+
+				.email {
+					color: white;
+					transition: 0.2s;
+				}
 			}
 
 			.sideMenu {
