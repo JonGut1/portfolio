@@ -253,6 +253,28 @@ main {
   width: 90%;
   height: 90%; }
 
+.transTr .storyGame, .transTr .frogger, .transTr .universe {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-radius: 20px;
+  position: fixed;
+  left: 5%;
+  top: 5%;
+  bottom: 5%;
+  z-index: 2;
+  margin: auto;
+  width: 90%;
+  height: 90%; }
+
 .implode {
   width: 50rem;
   height: 20.3rem;
@@ -302,7 +324,50 @@ main {
   width: 90%;
   height: 90%; }
 
+.transTr .cardGame, .transTr .jasmine, .transTr .form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-radius: 20px;
+  position: fixed;
+  top: 5%;
+  bottom: 5%;
+  right: 5%;
+  z-index: 2;
+  margin: auto;
+  width: 90%;
+  height: 90%; }
+
 .trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 58%;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 20px; }
+
+.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
   -webkit-transition: 0s;
   -o-transition: 0s;
   transition: 0s;
@@ -349,6 +414,15 @@ main {
   -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5); }
 
+.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  border: 2px solid black;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.5); }
+
 .trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
   -webkit-transition: 0s;
   -o-transition: 0s;
@@ -357,7 +431,21 @@ main {
   height: 35%;
   padding: 20px; }
 
+.transTr .storyDesc, .transTr .cardDesc, .transTr .froggerDesc, .transTr .jasmineDesc, .transTr .universeDesc, .transTr .formDesc {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  width: 100%;
+  height: 35%;
+  padding: 20px; }
+
 .trans .storyText, .trans .cardText, .trans .froggerText, .trans .jasmineText, .trans .universeText, .trans .formText {
+  font-size: 20px;
+  overflow: auto;
+  padding-left: 3em;
+  padding-right: 3em; }
+
+.transTr .storyText, .transTr .cardText, .transTr .froggerText, .transTr .jasmineText, .transTr .universeText, .transTr .formText {
   font-size: 20px;
   overflow: auto;
   padding-left: 3em;
@@ -407,6 +495,12 @@ main {
   position: relative;
   background-color: rgba(255, 255, 255, 0.75); }
 
+.transTr .formImage, .transTr .universeImage {
+  padding: 0px;
+  padding-top: 20px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.75); }
+
 .storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -449,6 +543,10 @@ main {
   width: 100%;
   height: 100%; }
 
+.transTr .coming {
+  width: 100%;
+  height: 100%; }
+
 .extra {
   width: 100%;
   height: 20%;
@@ -470,8 +568,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -479,17 +575,17 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 30em;
-  padding-right: 30em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 8vh;
   background-color: #2E2E2E; }
   footer .gitRepo {
+    margin-left: 20px;
+    margin-right: 20px;
     color: white;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
@@ -503,6 +599,8 @@ footer {
         -ms-transform: scale(1.2);
             transform: scale(1.2); }
   footer .email {
+    margin-left: 20px;
+    margin-right: 20px;
     color: white;
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;

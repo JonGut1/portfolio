@@ -197,6 +197,22 @@ main {
 				height: 90%;
 			}
 
+			.transTr .storyGame, .transTr .frogger, .transTr .universe {
+				flex-direction: column;
+				justify-content: center;
+				transition: 0.5s;
+				background-color: rgba(255, 255, 255, 0.97);
+				border-radius: 20px;
+				position: fixed;
+				left: 5%;
+				top: 5%;
+				bottom: 5%;
+				z-index: 2;
+				margin: auto;
+				width: 90%;
+				height: 90%;
+			}
+
 			.implode {
 				width: 50rem;
 				height: 20.3rem;
@@ -232,7 +248,34 @@ main {
 				height: 90%;
 			}
 
+			.transTr .cardGame, .transTr .jasmine, .transTr .form  {
+				flex-direction: column;
+				justify-content: center;
+				transition: 0.5s;
+				background-color: rgba(255, 255, 255, 0.97);
+				border-radius: 20px;
+				position: fixed;
+				top: 5%;
+				bottom: 5%;
+				right: 5%;
+				z-index: 2;
+				margin: auto;
+				width: 90%;
+				height: 90%;
+			}
+
 			.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
+				transition: 0s;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				height: 58%;
+				border: none;
+				box-shadow: none;
+				padding: 20px;
+			}
+			.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
 				transition: 0s;
 				display: flex;
 				flex-direction: column;
@@ -265,8 +308,19 @@ main {
 				border-radius: 10px;
 				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
 			}
-
+			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
+				transition: 0s;
+				border: 2px solid black;
+				border-radius: 10px;
+				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
+			}
 			.trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
+				transition: 0s;
+				width: 100%;
+				height: 35%;
+				padding: 20px;
+			}
+			.transTr .storyDesc, .transTr .cardDesc, .transTr .froggerDesc, .transTr .jasmineDesc, .transTr .universeDesc, .transTr .formDesc {
 				transition: 0s;
 				width: 100%;
 				height: 35%;
@@ -274,6 +328,12 @@ main {
 			}
 
 			.trans .storyText, .trans .cardText, .trans .froggerText, .trans .jasmineText, .trans .universeText, .trans .formText {
+				font-size: 20px;
+				overflow: auto;
+				padding-left: 3em;
+				padding-right: 3em;
+			}
+			.transTr .storyText, .transTr .cardText, .transTr .froggerText, .transTr .jasmineText, .transTr .universeText, .transTr .formText {
 				font-size: 20px;
 				overflow: auto;
 				padding-left: 3em;
@@ -324,6 +384,12 @@ main {
 				position: relative;
 				background-color: rgba(255, 255, 255, 0.75);
 			}
+			.transTr .formImage, .transTr .universeImage {
+				padding: 0px;
+				padding-top: 20px;
+				position: relative;
+				background-color: rgba(255, 255, 255, 0.75);
+			}
 
 			.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
 				display: flex;
@@ -357,6 +423,10 @@ main {
 				width: 100%;
 				height: 100%
 			}
+			.transTr .coming {
+				width: 100%;
+				height: 100%
+			}
 
 			.extra {
 				width: 100%;
@@ -381,12 +451,9 @@ main {
 
 			footer {
 				display: flex;
-				flex-wrap: wrap;
 				flex-direction: row;
 				align-items: center;
-				justify-content: space-between;
-				padding-left: 30em;
-				padding-right: 30em;
+				justify-content: center;
 				position: absolute;
 				bottom: 0;
 				width: 100%;
@@ -394,6 +461,8 @@ main {
 				background-color: #2E2E2E;
 
 				.gitRepo {
+					margin-left: 20px;
+					margin-right: 20px;
 				color: white;
 				transition: 0.2s;
 				}
@@ -404,6 +473,8 @@ main {
 				}
 
 				.email {
+					margin-left: 20px;
+					margin-right: 20px;
 					color: white;
 					transition: 0.2s;
 				}

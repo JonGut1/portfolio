@@ -8,8 +8,14 @@ var main = document.querySelector('main').children;
 var side = document.querySelector('.sideMenu');
 var mainName = document.querySelector('main');
 
+var transform = 'trans';
+
+if (navigator.userAgent.includes("Edge")) {
+	transform = 'transTr';
+}
+
 click.addEventListener('click', function (ev) {
-	if (document.querySelector('.trans') === null) {
+	if (document.querySelector('.' + transform) === null) {
 		if (ev.target.className === "listAbout") {
 			for (var i = 1; i < main.length; i++) {
 				main[i].style.display = "none";
@@ -38,7 +44,7 @@ click.addEventListener('click', function (ev) {
 	}
 });
 side.addEventListener('click', function (ev) {
-	if (document.querySelector('.trans') === null) {
+	if (document.querySelector('.' + transform) === null) {
 		if (ev.target.className === "listAbout") {
 			for (var i = 1; i < main.length; i++) {
 				main[i].style.display = "none";
@@ -70,7 +76,7 @@ side.addEventListener('click', function (ev) {
 var hambu = document.querySelector('.menuButton');
 
 hambu.addEventListener('click', function () {
-	if (document.querySelector('.trans') === null) {
+	if (document.querySelector('.' + transform) === null) {
 		if (mainName.className === "menuHidden content") {
 			mainName.className = "content";
 		} else {
@@ -124,7 +130,7 @@ function more(el) {
 }
 
 function modalClick(e) {
-	if (document.querySelector('.trans') === null) {
+	if (document.querySelector('.' + transform) === null) {
 		if (e.target.className === "coming") {
 			e.target.parentElement.click();
 		}
@@ -133,14 +139,14 @@ function modalClick(e) {
 			var before = document.createElement('div');
 			before.classList.add('before');
 			var container = document.querySelector('.' + contArr[e.target.className]);
-			container.className = 'trans ' + contArr[e.target.className];
+			container.className = transform + ' ' + contArr[e.target.className];
 			if (document.querySelector('.before') === null) {
 				container.insertBefore(before, container.children[0]);
 			}
 			if (mainName.className === "content") {
 				mainName.className = "menuHidden content";
 			}
-			if (document.querySelector('.trans') != null) {
+			if (document.querySelector('.' + transform) != null) {
 				var button = document.createElement('div');
 				button.className = 'glyph glyphicon glyphicon-remove';
 				if (document.querySelector('.glyph') === null) {
