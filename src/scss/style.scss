@@ -1,547 +1,388 @@
-header {
-	box-sizing: border-box;
-}
+@import 'themes';
 
 html {
 	height: 100%;
+	width: 100%;
 }
 
 body {
-	margin: 0px;
-	background-color: #D8D8D8;
+	position: relative;
+	min-height: 100%;
 	width: 100%;
-	min-height:100%;
-  	position:relative;
+	background-color: $body;
+	transition: 0.3s;
+
+	#pop-menu {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: fixed;
+		z-index: 2;
+		height: 100vh;
+		width: 70vw;
+		left: -70vw;
+		list-style-type: none;
+		padding: 0;
+		transition: 0.3s;
+
+		&[open=''] {
+			transition: 0.3s;
+			left: 0;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+			background-color: $pop-menu;
+		}
+
+		li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 20%;
+			margin-bottom: 1em;
+			margin-top: 1em;
+			font-size: 1.5em;
+
+			&[selected=''] {
+				color: black;
+				background-color: rgba(255,255,255,0.5);
+			}
+		}
+	}
 }
 
+/* header styles */
 header {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	width: 100%;
-	height: 15em;
-	background-color: #2E2E2E;
-}
+	background-color: $header;
+	color: white;
+	font-weight: bold;
+	position: relative;
 
 	.intro {
 		display: flex;
 		flex-direction: column;
-		padding-top: 20px;
-		padding-right: 100px;
 		width: 100%;
-		color: white;
-		height: 70%;
+		height: 4em;
+		font-size: 2em;
+		padding-top: 0.5em;
+		padding-bottom: 0.2em;
+		border-bottom: 3px solid white;
+		overflow: hidden;
 
-}
-		.mainTitle {
-		font-size: 40px;
-		display: flex;
-		justify-content: flex-end;
-		}
-
-		.titleDesc {
-			font-size: 20px;
+		span {
 			display: flex;
 			justify-content: flex-end;
+			margin-right: 1em;
+		}
+	}
+
+	nav {
+		width: 100%;
+		height: 4em;
+		background-color: inherit;
+		transition: 0.3s;
+		overflow: hidden;
+
+		&[fixed='true'] {
+			position: fixed;
+			height: 4em;
+			top: 0;
 		}
 
-	.navBar {
-		margin: 0;
-		color: white;
-		width: 100%;
-		height: 30%;
-		font-size: 20px;
-		border-top: 2px solid white;
+		&[open=''] {
+			transition: 0.3s;
+			margin-left: 70vw;
+			width: 30vw;
+		}
+
+		button {
+			display: flex;
+			align-items: center;
+			padding: 0;
+			height: 100%;
+			margin-left: 1em;
+			background-color: transparent;
+			border: none;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			span {
+				font-size: 2em;
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 100%;
+			list-style-type: none;
+			padding: 0;
+
+			li {
+
+				&:hover {
+					color: black;
+					background-color: rgba(255,255,255,0.5);
+					cursor: pointer;
+				}
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.5em;
+				width: 50%;
+				height: 100%;
+
+				&[selected=''] {
+					color: black;
+					background-color: rgba(255,255,255,0.5);
+				}
+			}
+		}
+	}
+}
+
+/* about page */
+main {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	&[fixed=''] {
+		margin-top: 7vh;
 	}
 
-	.navBar[active=""] {
-		position: fixed;
-		top: 0;
-		height: 3em;
-		z-index: 2;
-		background-color: #2E2E2E;
-	}
-
-	.uList {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		padding: 0px;
-		margin: 0px;
-	}
-
-	.listAbout[active=""], .listProj[active=""] {
-		background-color: rgba(255, 255, 255, 1);
-		color: black;
-	}
-
-	.listAbout, .listProj {
+	.title {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 50%;
-		margin: 0px;
-		transition: 0.5s;
+		width: 100%;
+		height: 3em;
+		margin-top: 1em;
+		border-top: 1px solid silver;
+		border-bottom: 1px solid black;
+		box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
+		background: linear-gradient(-90deg, #FFBB73, #FFEAD3);
+
+		h1 {
+			margin: 0;
+			font-size: 1.5em;
+		}
 	}
 
-	.listAbout:hover, .listProj:hover, .listExp:hover {
-		cursor: pointer;
-		transition: 0.5s;
-		color: black;
-		box-shadow: inset 0px 100px 0px 0px rgba(255,255,255,0.75);
+	section {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 1em;
 	}
 
+	#completed-projects, #in-progress-projects {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		min-height: 10vh;
+		width: 80%;
+		padding: 0;
+		list-style-type: none;
+		margin: 0;
 
-main {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	width: 100%;
-}
-
-	.about {
-		width: 90%;
-		margin-bottom: 15rem;
+	.clone {
+		display: flex;
+		flex-direction: row;
+		height: 20em;
+		width: 25em;
+		padding: 0;
+		margin: 1em;
 	}
 
+	li {
+		display: flex;
+		flex-direction: row;
+		width: 30em;
+		height: 17em;
+		list-style-type: none;
+		padding: 0;
+		margin: 1em;
 
-		.titleAbout {
-			display: flex;
-			justify-content: center;
-			font-size: 40px;
-			padding: 10px;
-			border-bottom: 2px solid black;
-			margin-top: 1rem;
+		.exit-button-cont {
+			position: absolute;
+			z-index: 2;
+			right: 5%;
+			top: 5%;
+			width: 3em;
+			height: 3em;
+			padding: 0;
+			margin-right: 0.5em;
+			transition: 0.3s;
+			border-radius: 50px;
+			background-color: white;
+			border: 1px solid silver;
+
+			button {
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				font-size: 2em;
+				background-color: transparent;
+				border: none;
+			}
 		}
 
-		.contentAbout {
+		&[expand=''] {
+			position: fixed;
+			z-index: 2;
+			animation-name: pop;
+    		animation-duration: 0.2s;
+    		left: 5%;
+    		right: 5%;
+    		top: 5%;
+    		bottom: 5%;
+    		width: 90%;
+    		height: 90%;
+			margin: 0;
+
+			.project-card-cont {
+				font-size: 1.5em;
+				.description-cont {
+					overflow-y: auto;
+					padding-right: 1em;
+					padding-left: 1em;
+				}
+			}
+		}
+
+		@keyframes pop {
+    		from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    		to {left: 5%; right: 5%; top: 5%; bottom: 5%; width: 90%; height: 90%;}
+		}
+
+		.project-card-cont {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
-			padding: 10px;
-			margin-top: 1rem;
-			border: 1px solid black;
-			background-color: #E6E6E6;
-			box-shadow: 0px 20px 30px 15px rgba(0,0,0,0.50);
-		}
-			.text {
-				text-align: left;
-				padding-top: 2em;
-				padding-left: 10em;
-				padding-right: 10em;
-				width: 100%;
-				font-size: 18px;
-				font-weight: bold;
-				word-wrap: break-word;
-				margin: 0px;
-			}
+			width: 100%;
+			height: 100%;
+			border-radius: 20px;
+			background-color: $project-cards;
+			margin: 1em;
+			object-fit: cover;
+			transition: 0.2s;
 
-			.imgMe {
+			.title-cont {
 				display: flex;
 				justify-content: center;
+				align-items: center;
+				height: 15%;
+				width: 100%;
+
+				h2 {
+					font-size: 1.5em;
+				}
+			}
+
+			.image-cont {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 1em;
 				width: 50%;
 				height: 70%;
-				box-shadow: -5px 5px 10px 0px rgba(0,0,0,0.50);
-				transition: 0.5s;
-			}
 
-			.projects {
-				width: 90%;
-				display: none;
-				margin-bottom: 15rem;
-			}
-
-			.projCont {
-				display: flex;
-				flex-wrap: wrap;
-				flex-direction: row;
-				justify-content: space-between;
-				padding: 2em;
-			}
-
-			.titleProj {
-				display: flex;
-				justify-content: center;
-				font-size: 40px;
-				padding: 10px;
-				border-bottom: 2px solid black;
-				margin-top: 1rem;
-			}
-
-			.storyGame, .cardGame, .frogger, .jasmine, .universe, .form {
-				display: flex;
-				flex-direction: row;
-				width: 50rem;
-				height: 20.3rem;
-				transition: 0.5s;
-				border-right: 1px solid black;
-
-			}
-
-			.trans .storyGame, .trans .frogger, .trans .universe {
-				flex-direction: column;
-				justify-content: center;
-				transition: 0.5s;
-				background-color: rgba(255, 255, 255, 0.97);
-				border-radius: 20px;
-				position: fixed;
-				left: 5%;
-				top: 5%;
-				bottom: 5%;
-				z-index: 2;
-				margin: auto;
-				width: 90%;
-				height: 90%;
-			}
-
-			.transTr .storyGame, .transTr .frogger, .transTr .universe {
-				flex-direction: row;
-				justify-content: center;
-				transition: 0.5s;
-				background-color: rgba(255, 255, 255, 0.97);
-				border-radius: 20px;
-				position: fixed;
-				top: 5%;
-				bottom: 5%;
-				left: 5%;
-				right: 5%;
-				z-index: 2;
-				margin: auto;
-				width: 90%;
-				height: 90%;
-			}
-
-			.implode {
-				width: 50rem;
-				height: 20.3rem;
-				margin: 1em;
-				transition: 0s;
-			}
-
-			.glyph {
-				display: flex;
-				justify-content: flex-end;
-				align-items: center;
-				text-align: right;
-				padding-top: 1rem;
-				height: 7%;
-				padding-right: 1rem;
-				font-size: 50px;
-				transition: 0.5s;
-			}
-
-			.trans .cardGame, .trans .jasmine, .trans .form  {
-				flex-direction: column;
-				justify-content: center;
-				transition: 0.5s;
-				background-color: rgba(255, 255, 255, 0.97);
-				border-radius: 20px;
-				position: fixed;
-				top: 5%;
-				bottom: 5%;
-				right: 5%;
-				z-index: 2;
-				margin: auto;
-				width: 90%;
-				height: 90%;
-			}
-
-			.transTr .cardGame, .transTr .jasmine, .transTr .form  {
-				flex-direction: row;
-				justify-content: center;
-				transition: 0.5s;
-				background-color: rgba(255, 255, 255, 0.97);
-				border-radius: 20px;
-				position: fixed;
-				top: 5%;
-				bottom: 5%;
-				left: 5%;
-				right: 5%;
-				z-index: 2;
-				margin: auto;
-				width: 90%;
-				height: 90%;
-			}
-
-			.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
-				transition: 0s;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				width: 100%;
-				height: 58%;
-				border: none;
-				box-shadow: none;
-				padding: 20px;
-			}
-			.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
-				transition: 0s;
-				display: flex;
-				justify-content: center;
-				width: 50%;
-				height: 100%;
-				border: none;
-				box-shadow: none;
-				padding: 20px;
-			}
-
-			.card, .story, .frog, .jasm, .univ, .for {
-				width: 50rem;
-				height: 20.3rem;
-				margin: 1em;
-			}
-
-			.before {
-				width: 100%;
-				height: 100%;
-			}
-
-			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				transition: 0s;
-				display: flex;
-				margin-right: auto;
-				margin-left: auto;
-				align-items: center;
-				border: 2px solid black;
-				border-radius: 10px;
-				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
-			}
-			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
-				transition: 0s;
-				width: auto;
-				height: 373px;
-				border: 2px solid black;
-				border-radius: 10px;
-				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
-			}
-			.trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
-				transition: 0s;
-				width: 100%;
-				height: 35%;
-				padding: 20px;
-			}
-			.transTr .storyDesc, .transTr .cardDesc, .transTr .froggerDesc, .transTr .jasmineDesc, .transTr .universeDesc, .transTr .formDesc {
-				transition: 0s;
-				width: 50%;
-				height: 100%;
-				padding: 20px;
-			}
-
-			.trans .storyText, .trans .cardText, .trans .froggerText, .trans .jasmineText, .trans .universeText, .trans .formText {
-				font-size: 20px;
-				overflow: auto;
-				padding-left: 3em;
-				padding-right: 3em;
-			}
-			.transTr .storyText, .transTr .cardText, .transTr .froggerText, .transTr .jasmineText, .transTr .universeText, .transTr .formText {
-				font-size: 20px;
-				overflow: auto;
-				padding-left: 3em;
-				padding-right: 3em;
-			}
-
-			::-webkit-scrollbar {
-    			-webkit-appearance: none;
-    				width: 5px;
-			}
-			::-webkit-scrollbar-thumb {
-			    background-color: rgba(0, 0, 0, 0.1);
-			    border-radius: 10px;
-			}
-
-			.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
-				width: 47%;
-				height: 100%;
-				border: 2px solid black;
-				border-radius: 10px;
-				box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.50);
-				transition: 1s;
-    			overflow: hidden;
-    			transition: 0s;
-
-			}
-
-			.storyImage:hover, .cardImage:hover, .froggerImage:hover, .jasmineImage:hover, .universeImage:hover, .formImage:hover {
-				cursor: pointer;
-
-			}
-
-			.memory-gameIMG, .froggerIMG, .storyIMG, .jasmineIMG, .universeIMG, .formIMG {
-				height: 100%;
-				position: relative;
-				z-index: -1;
-				transition: 0s;
-			}
-
-			.formImage, .universeImage {
-				position: relative;
-				background-color: rgba(255, 255, 255, 0.75);
-			}
-
-			.trans .formImage, .trans .universeImage {
-				padding: 0px;
-				padding-top: 20px;
-				position: relative;
-				background-color: rgba(255, 255, 255, 0.75);
-			}
-			.transTr .formImage, .transTr .universeImage {
-				padding: 0px;
-				padding-top: 20px;
-				position: relative;
-				background-color: rgba(255, 255, 255, 0.75);
-			}
-
-			.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
-				display: flex;
-				flex-wrap: wrap;
-				width: 53%;
-				height: 100%;
-				padding: 1em;
-				transition: 0s;
-			}
-
-			.storyText, .cardText, .froggerText, .jasmineText, .universeText, .formText {
-				font-size: 18px;
-				transition: 0s;
-				width: 100%;
-				height: 80%;
-				overflow: hidden;
-			}
-
-			.coming {
-				position: absolute;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				font-size: 30px;
-				font-style: bold;
-				width: 100%;
-				height: 100%;
-			}
-
-			.trans .coming {
-				width: 100%;
-				height: 100%
-			}
-			.transTr .coming {
-				width: 100%;
-				height: 50%
-			}
-
-			.extra {
-				width: 100%;
-				height: 20%;
-				text-align: center;
-			}
-
-			.more, .repo, .demo {
-				height: 100%;
-				width: 30%;
-				padding-left: 2px;
-				padding-right: 2px;
-				margin: 0px;
-				font-size: 16px;
-			}
-
-			.more:hover, .repo:hover, .demo:hover {
-				cursor: pointer;
-				color: black;
-			}
-
-
-			footer {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				justify-content: center;
-				position: absolute;
-				bottom: 0;
-				width: 100%;
-				height: 8vh;
-				background-color: #2E2E2E;
-
-				.gitRepo {
-					margin-left: 20px;
-					margin-right: 20px;
-				color: white;
-				transition: 0.2s;
-				}
-				.gitRepo:hover {
-					transition: 0.2s;
-					cursor: pointer;
-					transform: scale(1.2);
-				}
-
-				.email {
-					margin-left: 20px;
-					margin-right: 20px;
-					color: white;
-					transition: 0.2s;
-				}
-			}
-
-			.sideMenu {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				position: absolute;
-				width: 20rem;
-				height: 25rem;
-				background-color: #2E2E2E;
-				border: 1px solid black;
-				left: 0;
-				transition: 0.3s;
-			}
-
-			.sideMenu[active=""] {
-				position: fixed;
-				top: 8vh;
-				z-index: 2;
-			}
-
-			.menuHidden .sideMenu{
-				transform: translateX(-15em);
-				transition: 0.3s;
-			}
-
-			.sideMenuUl {
-				list-style-type: none;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				padding-left: 0px;
-				transition: 0.3s;
-				height: 100%;
-			}
-
-			.sideMenuUl {
-				.listAbout, .listProj {
-					color: white;
-					background-color: #424242;
-					font-size: 20px;
+				img {
+					height: auto;
 					width: 100%;
-					height: 50%;
+					object-fit: cover;
 				}
 			}
 
-			.menuButton {
-				background-color: #2E2E2E;
-				border: none;
-				width: 2rem;
-				height: 2rem;
-				padding: 0px;
-				margin-left: 1rem;
-				display: flex;
-				align-items: center;
-				display: none;
-				margin-top: 1rem;
-			}
+			.info-cont {
+				padding: 0.1em;
+				width: 50%;
+				height: 70%;
 
-			.glyphicon-menu-hamburger {
-				color: white;
-				width: 100%;
-				font-size: 2.2rem;
+				.date-cont {
+					height: 15%;
+					width: 100%;
+					padding: 0.2em;
+					font-size: 1em;
+					font-style: italic;
+				}
+
+				.description-cont {
+					padding-top: 0.5em;
+					padding-bottom: 0.5em;
+					padding-right: 0.5em;
+					height: 85%;
+					width: 100%;
+					overflow-y: hidden;
+				}
 			}
+			.links-cont {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				width: 100%;
+				height: 15%;
+				padding: 0.2em;
+
+				a {
+					color: $links;
+					margin-left: auto;
+					margin-right: auto;
+					height: 100%;
+				}
+
+				a:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	}
+
+	#in-progress-projects {
+		margin-bottom: 10em;
+	}
+
+	.about-content {
+		margin-top: 1em;
+		width: 80%;
+		margin-bottom: 5em;
+		min-height: 80vh;
+
+		.about-cont {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			p {
+				width: 50%;
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 4em;
+	background-color: $footer;
+
+	a {
+		font-size: 1.3em;
+		text-decoration: underline;
+		color: white;
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+}

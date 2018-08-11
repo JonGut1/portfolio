@@ -10,156 +10,21 @@
 </head>
 <body>
 	<header>
-		<div class="intro">
+		<div tabindex="1" class="intro">
 			<span class="mainTitle">Jonas</span>
-			<span class="titleDesc">Front-End Developer</span>
+			<span class="titleDesc">Front-End Web Developer</span>
 		</div>
-		<nav class="navBar">
-			<button class="menuButton">
-				<span class="glyphicon glyphicon-menu-hamburger"></span>
-			</button>
-			<ul class="uList">
-				<li class="listAbout" active>About</li>
-				<li class="listProj">Projects</li>
-			</ul>
+		<nav tabindex="1" class="navBar">
 		</nav>
 	</header>
-	<main class="menuHidden content">
-		<aside class="sideMenu">
-			<ul class="sideMenuUl">
-				<li class="listAbout" active>About</li>
-				<li class="listProj">Projects</li>
-			</ul>
-		</aside>
-		<section class="about">
-			<span class="titleAbout">About</span>
-				<p class="text">Hello, my name is Jonas. I'm a starting Front End Web Developer and this is my portfolio page. Here you can find  all of the programming projects that I have been involved in. All of the projects contain a short description, with the links to the git repositories and demos. You can click on the links for more detailed information regarding all the hows and whys. If you'd like to test and play around with the projects, feel free to clone my git repositories. Hope you'll enjoy it. Also feedback is always welcome.</p>
-		</section>
-		<section class="projects">
-			<span class="titleProj">Projects</span>
-			<div class="projCont">
-				<div class="story">
-					<div class="storyGame">
-					<div class="storyImage">
-						<img class="storyIMG" src="img/story-game.png" alt="a person stand near a window in a shadowy room">
-					</div>
-					<div class="storyDesc">
-						<p class="storyText">This is a story game which requires to answer question and proceed to the next level if answered correctly. Some of the questions are timed, and if the time runs out you might lose the game. <br><br>
-							The game was done as part of the Game Design and Development course. The requirements were to use the haxe language and use a local database so that all of the information and the questions would be loaded from it. <br><br>
-							The game was made using Haxe programming language. Also some of the code regarding the screen switcher was provided by the course.
-						</p>
-							<div class="extra">
-								<a class="demo" ></a>
-								<a class="repo" href="https://github.com/JonGut1/story-game">GitHub</a>
-								<a class="more"> Expand --> </a>
-							</div>
-					</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="cardGame">
-					<div class="cardImage">
-						<img class="memory-gameIMG" src="img/memory-game.png" alt="4 by 4 face down cards">
-					</div>
-					<div class="cardDesc">
-						<p class="cardText">This is a matching game. The player has to match two cards in order to progress through the game. The players compete by matching the cards as fast as possible in order to gain more score. Also players can save there scores in a local storage. <br><br>
-							The game was programmed as part of the Udacity Front-End Nanodegree course assignment.
-						<br><br>
-						This project was made using JavaScript CSS3 and HTML5. All of the code was researched and written by me, excluding one function that is responsible for shuffling cards. This function was provided by the course.<br><br>
-							Runs on Chrome, Safari, Opera and FireFox.
-						</p>
-						<div class="extra">
-							<a class="demo" href="https://jongut1.github.io/memory-game/">Demo</a>
-							<a class="repo" href="https://github.com/JonGut1/memory-game">GitHub</a>
-							<a class="more"> Expand --> </a>
-						</div>
-					</div>
-					</div>
-				</div>
-				<div class="frog">
-					<div class="frogger">
-					<div class="froggerImage">
-						<img class="froggerIMG" src="img/frogger-clone.png" alt="a few of menu buttons with a street tile background">
-					</div>
-					<div class="froggerDesc">
-						<p class="froggerText">This game is a classic frogger game clone. The game is played out by navigating the character to the river at the top of the screen. The movement is done by the arrow keys on the keyboard or on the screen if the player plays it on a mobile device. The game counts score and the player can log his score into the local storage. <br><br>
-							This game was made as part of the Udacity Front-End Nanodegree course assignment. <br><br>
-							This project was made using JavaScript CSS3 and HTML5 and HTML5 canvas. Most of the code was written by me, though a recource.js file and a basic game loop was provided by the course.<br><br>
-							Runs on Chrome, Safari, Opera and FireFox.
-						</p>
-						<div class="extra">
-								<a class="demo" href="https://jongut1.github.io/frogger-clone/">Demo</a>
-								<a class="repo" href="https://github.com/JonGut1/frogger-clone">GitHub</a>
-								<a class="more"> Expand --> </a>
-							</div>
-					</div>
-					</div>
-				</div>
-				<div class="jasm">
-					<div class="jasmine">
-					<div class="jasmineImage">
-						<img class="jasmineIMG" src="img/jasmine.png" alt="a web page of done tests">
-					</div>
-					<div class="jasmineDesc">
-						<p class="jasmineText">This is a testing project. It tests whether some of the functions of the page are operational. Such as a side menu is hidden by default, or whether it opens and closes on click. Checks whether the asynchronous feed has loaded at least one element, etc. <br><br>
-							This project was made as part of the Udacity Front-End Nanodegree course assignment. <br><br>
-							All of the code regarding testing was written by me, except one test suite that was started by the course but not finished, which I finished. <br><br>
-							The testing was done using jasmine which is done by using JavaScript;
-						</p>
-						<div class="extra">
-								<a class="demo" href=""></a>
-								<a class="repo" href="https://github.com/JonGut1/jasmine-testing">GitHub</a>
-								<a class="more"> Expand --> </a>
-							</div>
-					</div>
-					</div>
-				</div>
-				<div class="univ">
-					<div class="universe">
-					<div class="universeImage">
-						<span class="coming">Coming Soon</span>
-						<img class="universeIMG" src="img/universe-game.png" alt="a few circles on a white background">
-					</div>
-					<div class="universeDesc">
-						<p class="universeText">The core of this game will be to experience gravity and various cosmic objects by controlling them in a gravity driven environtment. The game is still in early development, thus there are no gameplay features that could be shown off. <br><br>
-							This project will be made using JavaScript CSS3 and HTML5 and HTML5 canvas.<br><br>
-							Runs on Chrome, Safari, Opera and FireFox.
-						</p>
-						<div class="extra">
-								<a class="demo" href="https://jongut1.github.io/jonas-universe/">Demo</a>
-								<a class="repo" href="https://github.com/JonGut1/jonas-universe">GitHub</a>
-								<a class="more"> Expand --> </a>
-							</div>
-					</div>
-				</div>
+	<main>
 
-				</div>
-				<div class="for">
-					<div class="form">
-					<div class="formImage">
-						<span class="coming">Coming Soon</span>
-						<img class="formIMG" src="img/form.png" alt="a log in page">
-					</div>
-					<div class="formDesc">
-						<p class="formText">This project uses MySql database to gather all of the data from filled forms and store it in a database. If the user would want to check his past forms he would be able to do that.<br><br>
-							This project will be done using JavaScript, PHP, CSS3 HTML5.
-					</p>
-					<div class="extra">
-								<a class="demo" href=""></a>
-								<a class="repo" href=""></a>
-								<a class="more"> Expand --> </a>
-							</div>
-					</div>
-				</div>
-				</div>
-
-			</div>
-		</section>
 	</main>
-		<footer class="footer">
+		<footer tabindex="1">
 			<a class="gitRepo" href="https://github.com/JonGut1">GitHub</a>
-			<span class="email">Email: jonas.gutauskas.jg@gmail.com</span>
+			<a class="linkedIn" href="https://www.linkedin.com/in/jonas-gutauskas/">LinkedIn</a>
 		</footer>
+<script src="js/register_service_worker.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

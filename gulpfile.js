@@ -3,6 +3,9 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var babel = require('gulp-babel');
+var browserify = require('gulp-browserify');
+var sourcemaps = require('gulp-sourcemaps');
+var polyfiller = require('gulp-polyfiller');
 /**
 * converts the .scss files to css and stores,
 * them in a new folder.
@@ -11,10 +14,12 @@ var babel = require('gulp-babel');
 */
 gulp.task('styles', function(done) {
 	gulp.src('src/scss/*.scss')
+	.pipe(sourcemaps.init())
 	.pipe(sass().on('error', sass.logError))
 	.pipe(autoprefixer({
 		browsers: ['last 5 versions']
 	}))
+	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('docs/css'))
 	browserSync.reload();
 	done()
@@ -23,17 +28,16 @@ gulp.task('styles', function(done) {
 * Runs the default gulp command.
 * it watches for the changes in .scss files, index.html and .js files.
 */
-gulp.task('default', function(done) {
+gulp.task('start', function(done) {
 	/**
 	* Refreshes the page after save file
 	*/
 	browserSync.init({
      server: "docs/",
-     browser: ["google chrome"]
 });
 	gulp.watch('src/scss/*.scss', gulp.series('styles'))
 	gulp.watch('src/index.html', gulp.series('copy-html'))
-	gulp.watch('src/js/*.js', gulp.series('scripts'))
+	gulp.watch('src/js/main.js', gulp.series('scripts'))
 	done()
 });
 /**
@@ -46,6 +50,12 @@ gulp.task('scripts', function(done) {
 		plugins: ['transform-runtime'],
         presets: ['env']
     }))
+    /**
+	* Inserts globals, so that require would be difined in main js files.
+	*/
+	.pipe(browserify( {
+		insertGlobals: true
+	}))
 	.pipe(gulp.dest('docs/js'))
 	browserSync.reload();
 	done()

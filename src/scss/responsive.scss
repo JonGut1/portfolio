@@ -1,429 +1,1239 @@
-@media  screen and (min-width: 1280px) {
-	.content {
-		max-width: 1280px;
+@import 'themes';
+
+
+/* smartphones */
+@media screen and (max-width: 450px) {
+	header {
+		.intro {
+			font-size: 1.5em;
+		}
+	}
+
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: center;
+			width: 100%;
+			li {
+				margin: 0;
+				margin-bottom: 1em;
+				margin-top: 1em;
+				height: 30em;
+				width: 100%;
+				border: 1px solid silver;
+
+				.project-card-cont {
+						flex-direction: column;
+						border-radius: 0;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
+
+				&[expand=''] {
+					bottom: 0;
+					right: 0;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
+					}
+
+					.exit-button-cont {
+						width: 2em;
+						height: 2em;
+
+						button {
+							font-size: 1em;
+						}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						border-radius: 0;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							display: none;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 50%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		.about-content {
+			width: 100%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* smartphones */
+@media screen and (max-width: 760px) and (min-width: 451px) {
+	header {
+		.intro {
+			font-size: 1.5em;
+		}
+	}
+
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: center;
+			width: 100%;
+			li {
+				margin: 0;
+				margin-bottom: 1em;
+				margin-top: 1em;
+				height: 30em;
+				width: 90%;
+
+				.project-card-cont {
+						flex-direction: column;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
+
+				&[expand=''] {
+					bottom: 5%;
+					right: 5%;
+					left: 5%;
+					top: 5%;
+					width: 90%;
+					height: 90%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 5%; right: 5%; top: 5%; bottom: 5%; width: 90%; height: 90%;}
+					}
+
+					.exit-button-cont {
+						width: 2em;
+						height: 2em;
+
+						button {
+							font-size: 1em;
+						}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						border-radius: 0;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							display: none;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 50%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		.about-content {
+			width: 100%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* tablets */
+@media screen and (max-width: 1000px) and (min-width: 761px) {
+	header {
+		.intro {
+			font-size: 1.5em;
+		}
+	}
+
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: center;
+			width: 100%;
+			li {
+				margin: 1em;
+				margin-top: 2em;
+				height: 20em;
+				width: 25em;
+				.project-card-cont {
+						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+						flex-direction: row;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							img {
+								width: 100%;
+								height: auto;
+							}
+						}
+
+						.info-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
+
+				&[expand=''] {
+					bottom: 5%;
+					right: 5%;
+					left: 5%;
+					top: 5%;
+					width: 90%;
+					height: 90%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							display: none;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 50%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
+			content: '';
+			margin: 1em;
+			margin-top: 2em;
+			height: 0;
+			width: 25em;
+		}
+
+		.about-content {
+			width: 100%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* big tablets smaller computers */
+@media screen and (max-width: 1140px) and (min-width: 1001px) {
+	header {
+		.intro {
+			font-size: 2em;
+		}
+	}
+
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: space-between;
+			width: 90%;
+			li {
+				margin: 1em;
+				margin-top: 2em;
+				height: 20em;
+				width: 30em;
+				.project-card-cont {
+						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+						flex-direction: row;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							img {
+								width: 100%;
+								height: auto;
+							}
+						}
+
+						.info-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
+
+				&[expand=''] {
+					bottom: 5%;
+					right: 5%;
+					left: 5%;
+					top: 5%;
+					width: 90%;
+					height: 90%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 40%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
+			content: '';
+			margin: 1em;
+			margin-top: 2em;
+			height: 0;
+			width: 25em;
+		}
+
+		.about-content {
+			width: 70%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* large screens */
+@media screen and (max-width: 1300px) and (min-width: 1141px) {
+	header {
+		.intro {
+			font-size: 2em;
+		}
+	}
+
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: space-between;
+			width: 100%;
+			li {
+				margin: 1em;
+				margin-top: 2em;
+				height: 20em;
+				width: 25em;
+				.project-card-cont {
+						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+						flex-direction: row;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							img {
+								width: 100%;
+								height: auto;
+							}
+						}
+
+						.info-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
+
+				&[expand=''] {
+					bottom: 5%;
+					right: 5%;
+					left: 5%;
+					top: 5%;
+					width: 90%;
+					height: 90%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 40%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
+			content: '';
+			margin: 1em;
+			margin-top: 2em;
+			height: 0;
+			width: 25em;
+		}
+
+		.about-content {
+			width: 70%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* landscape smartphones */
+@media screen and (max-height: 420px) and (min-height: 351px) {
+	header {
+		.intro {
+			font-size: 1.5em;
+		}
+
+		nav {
+			height: 3em;
+
+			&[fixed='true'] {
+				height: 3em;
+			}
+		}
+	}
+
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: center;
+			width: 100%;
+			li {
+				margin: 1em;
+				margin-bottom: 1em;
+				margin-top: 2em;
+				height: 20em;
+				width: 20em;
+
+				.project-card-cont {
+						flex-direction: row;
+						border-radius: 20px;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							img {
+								width: 100%;
+								height: auto;
+							}
+						}
+
+						.info-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
+
+				&[expand=''] {
+					bottom: 0;
+					right: 0;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
+					}
+
+					.exit-button-cont {
+						width: 2em;
+						height: 2em;
+
+						button {
+							font-size: 1em;
+						}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						border-radius: 0;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							display: none;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 50%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 40%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		.about-content {
+			width: 100%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+/* landscape smartphones */
+@media screen and (max-height: 350px) {
+	header {
+		.intro {
+			font-size: 1.5em;
+		}
+
+		nav {
+			height: 3em;
+
+			&[fixed='true'] {
+				height: 3em;
+			}
+		}
+	}
+
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: center;
+			width: 100%;
+			li {
+				margin: 1em;
+				margin-bottom: 1em;
+				margin-top: 2em;
+				height: 20em;
+				width: 30em;
+
+				.project-card-cont {
+						flex-direction: row;
+						border-radius: 20px;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							img {
+								width: 100%;
+								height: auto;
+							}
+						}
+
+						.info-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
+
+				&[expand=''] {
+					bottom: 0;
+					right: 0;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
+					}
+
+					.exit-button-cont {
+						width: 2em;
+						height: 2em;
+
+						button {
+							font-size: 1em;
+						}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						border-radius: 0;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							display: none;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 50%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 40%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		.about-content {
+			width: 100%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1301px) {
+	header {
+		.intro {
+			font-size: 2em;
+		}
+	}
+
+	main {
+		width: 1301px;
 		margin-left: auto;
 		margin-right: auto;
 	}
-}
 
-@media screen and (max-width: 1250px) {
-	header {
-		height: 13em;
-	}
-	.text {
-		padding-left: 5em;
-		padding-right: 5em;
-	}
-	.card, .story, .frog, .jasm, .univ, .for {
-				width: 24rem;
-				height: 40rem;
-				margin: 1em;
-			}
-	.storyGame, .cardGame, .frogger, .jasmine, .universe, .form {
-		display: flex;
-		flex-direction: column;
-		width: 24rem;
-		height: 40rem;
-		border: none;
-		border-bottom: 1px solid black;
-	}
-	.before {
-		width: 100%;
-		height: 100%;
-	}
-	.storyImage, .cardImage, .froggerImage, .jasmineImage, .universeImage, .formImage {
-		width: 100%;
-		height: 50%
-	}
-	.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
-		width: 100%;
-		height: 50%;
-	}
-		.trans .storyGame, .trans .frogger ,.trans .universe {
-				top: 5%;
-				bottom: 5%;
-				left: 5%;
-				right: 5%;
-
-			}
-		.trans .cardGame, .trans .jasmine, .trans .form {
-				top: 5%;
-				bottom: 5%;
-				right: 5%;
-				left: 5%;
-			}
-			.transTr .storyGame, .transTr .frogger, .transTr .universe {
-				flex-direction: column;
-				top: 5%;
-				bottom: 5%;
-				left: 5%;
-				right: 5%;
-
-			}
-		.transTr .cardGame, .transTr .jasmine, .transTr .form {
-			flex-direction: column;
-				top: 5%;
-				bottom: 5%;
-				right: 5%;
-				left: 5%;
-			}
-			.implode {
-				width: 24rem;
-		height: 40rem;
-		margin: 1em;
-		transition: 0s;
-			}
-			.intro {
-				padding-top: 20px;
-				padding-right: 20px;
-			}
-			.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
-
-				width: 100%;
-				height: 43%;
-			}
-.transTr .storyDesc, .transTr .cardDesc, .transTr .froggerDesc, .transTr .jasmineDesc, .transTr .universeDesc, .transTr .formDesc {
-				width: 100%;
-				height: 50%;
-			}
-}
-@media screen and (max-width: 700px){
-	header {
-		height: 8em;
-	}
-	.trans .storyText, .trans .cardText, .trans .froggerText, .trans .jasmineText, .trans .universeText, .trans .formText {
-				font-size: 16px;
-				overflow: auto;
-				padding-left: 1em;
-				padding-right: 1em;
-	}
-	.sideMenu {
-		display: block;
-		transition: 0.5s;
-	}
-	.uList {
-		display: none;
-	}
-	.navBar {
-		height: 40%;
-		justify-content: flex-start;
-		border-top: 1px solid white;
-	}
-	.intro {
-		padding-right: 1rem;
-		padding-top: 1rem;
-		height: 60%;
-	}
-	.mainTitle {
-		font-size: 18px;
-		margin-bottom: 7px;
-	}
-	.titleDesc {
-		font-size: 12px;
-	}
-	.menuButton {
-		display: block;
-	}
-	.about, .projects {
-		width: 100%;
-	}
-	.titleAbout, .titleProj {
-		background-color: #FFFAF0;
-		padding: 0;
-		font-size: 30px;
-		margin-top: 0px;
-		border-top: none;
-		box-shadow: inset 0px 0px 80px 0px rgba(0,0,0,0.50);
-	}
-	.contentAbout, .projCont {
-		margin-top: 0px;
-		border: none;
-		box-shadow: none;
-		justify-content: center;
-	}
-	.listAbout[active=""], .listProj[active=""], .listExp[active=""] {
-		background-color: rgba(255, 255, 255, 1);
-		color: black;
-	}
-	.navBar[active=""] {
-		height: 4em;
-	}
-	.glyph {
-		font-size: 30px;
-	}
-
-
-}
-
-@media screen and (max-width: 820px) {
-	.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-		height: auto;
-		width: 100%;
-		box-shadow: none;
-	}
-}
-@media screen and (max-width: 500px){
-	header {
-		height: 8em;
-	}
-	.text {
-		padding-left: 2em;
-		padding-right: 2em;
-	}
-	.intro {
-		height: 60%;
-	}
-	.navBar {
-		height: 40%;
-	}
-	.navBar[active=""] {
-		height: 2.2em;
-	}
-	.sideMenu {
-				top: 8em;
-			}
-
-			.sideMenu[active=""] {
-				position: fixed;
-				top: 3em;
-			}
-	.glyph {
-				font-size: 35px;
-				transition: 0.5s;
-				height: 7%;
-				text-align: right;
-				padding-top: 15px;
-				margin: 0px;
-			}
-			.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
-				padding: 10px;
-				height: 50%;
-
-			}
-			.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
-				padding: 10px;
-				height: 50%;
-
-			}
-			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				height: auto;
-				width: 100%;
-				box-shadow: none;
-			}
-			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
-				height: auto;
-				width: 100%;
-				box-shadow: none;
-			}
-			.storyDesc, .cardDesc, .froggerDesc, .jasmineDesc, .universeDesc, .formDesc {
+	main {
+		section {
+			margin-bottom: 1em;
+		}
+		#in-progress-projects {
+			margin-bottom: 7em;
+		}
+		#completed-projects, #in-progress-projects {
+			justify-content: space-between;
 			width: 100%;
-			height: 50%;
-			}
-			.trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
-				width: 100%;
-				height: 50%;
-			}
-	.trans .cardGame, .trans .jasmine, .trans .universe {
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
-			.transTr .cardGame, .transTr .jasmine, .transTr .universe {
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
+			li {
+				margin: 1em;
+				margin-top: 2em;
+				height: 20em;
+				width: 25em;
+				.project-card-cont {
+						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+						flex-direction: row;
+						width: 100%;
+						height: 100%;
+						margin: 0;
 
-			.trans .storyGame, .trans .frogger, .trans .form {
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
-			.transTr .storyGame, .transTr .frogger, .transTr .form {
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
-}
+						.title-cont {
+							height: 10%;
+						}
 
-@media screen and (max-width: 450px) and (min-height: 700px) and (max-height: 901px) {
-	.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
-				padding: 10px;
-				height: 40%;
+						.image-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
 
-			}
-.trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
-				width: 100%;
-				height: 60%;
-			}
-			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				height: auto;
-				width: 80%;
-				box-shadow: none;
-			}
-			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
-				height: auto;
-				width: 80%;
-				box-shadow: none;
-			}
-}
+							img {
+								width: 100%;
+								height: auto;
+							}
+						}
 
-@media screen and (max-width: 370px) {
-	.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
-				padding: 10px;
-				height: 53%;
+						.info-cont {
+							width: 50%;
+							height: 80%;
+							padding: 1em;
 
-			}
-.trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
-				width: 100%;
-				height: 47%;
-			}
-			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				height: auto;
-				width: 80%;
-				box-shadow: none;
-			}
+							.date-cont {
+								height: 10%;
+							}
 
-}
-@media screen and (max-width: 390px) {
-.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				height: 90%;
-				width: auto;
-				box-shadow: none;
-			}
-			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
-				height: 90%;
-				width: auto;
-				box-shadow: none;
-			}
-			.text {
-				font-size: 16px;
-			}
-}
+							.description-cont {
+								height: 90%;
+								overflow-y: hidden;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				.exit-button-cont {
+					top: 1%;
+					right: 0%;
+				}
 
-@media screen and (max-height: 420px) and (max-width: 825px) {
-	.navBar[active=""] {
-		height: 2.2em;
+				&[expand=''] {
+					bottom: 5%;
+					right: 5%;
+					left: 5%;
+					top: 5%;
+					width: 90%;
+					height: 90%;
+					margin: 0;
+					animation-name: pop;
+					animation-duration: 0.2;
+
+					@keyframes pop {
+    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
+    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
+					}
+
+					.project-card-cont {
+						flex-direction: column;
+						width: 100%;
+						height: 100%;
+						margin: 0;
+
+						.title-cont {
+							height: 10%;
+						}
+
+						.image-cont {
+							width: 100%;
+							height: 40%;
+							padding: 1em;
+
+							img {
+								width: auto;
+								height: 100%;
+							}
+						}
+
+						.info-cont {
+							width: 100%;
+							height: 40%;
+
+							.date-cont {
+								height: 10%;
+							}
+
+							.description-cont {
+								height: 90%;
+								overflow-y: auto;
+							}
+						}
+						.links-cont {
+							border-top: 1px solid silver;
+							height: 10%;
+						}
+					}
+				}
+			}
+		}
+
+		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
+			content: '';
+			margin: 1em;
+			margin-top: 2em;
+			height: 0;
+			width: 25em;
+		}
+
+		.about-content {
+			width: 70%;
+
+			.about-cont {
+				width: 90%;
+
+				p {
+					width: 100%;
+				}
+			}
+		}
 	}
-.sideMenu {
-				top: 8em;
-			}
-
-			.sideMenu[active=""] {
-				position: fixed;
-				top: 3em;
-			}
-	.trans .cardGame, .trans .jasmine, .trans .universe {
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
-
-			.trans .storyGame, .trans .frogger, .trans .form {
-				display: flex;
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
-			.glyph {
-		font-size: 35px;
-		margin-bottom: 0.3em;
-	}
-	.trans .storyImage, .trans .cardImage, .trans .froggerImage, .trans .jasmineImage, .trans .universeImage, .trans .formImage {
-				padding: 10px;
-				height: 30%;
-
-			}
-.trans .storyDesc, .trans .cardDesc, .trans .froggerDesc, .trans .jasmineDesc, .trans .universeDesc, .trans .formDesc {
-				width: 100%;
-				height: 70%;
-			}
-
-
-			.transTr .cardGame, .transTr .jasmine, .transTr .universe {
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
-
-			.transTr .storyGame, .transTr .frogger, .transTr .formImage {
-				display: flex;
-				width: 100%;
-				height: 100%;
-				top: 0%;
-				left: 0%;
-				right: 0%;
-				bottom: 0%;
-				border-radius: 0px;
-				padding: 0px;
-			}
-	.transTr .storyImage, .transTr .cardImage, .transTr .froggerImage, .transTr .jasmineImage, .transTr .universeImage, .transTr .formImage {
-				padding: 10px;
-				height: 30%;
-
-			}
-.transTr .storyDesc, .transTr .cardDesc, .transTr .froggerDesc, .transTr .jasmineDesc, .transTr .universeDesc, .transTr .formDesc {
-				width: 100%;
-				height: 70%;
-			}
-			.trans .coming {
-				font-size: 20px;
-			}
-			.trans .storyIMG, .trans .memory-gameIMG, .trans .froggerIMG, .trans .jasmineIMG, .trans .universeIMG, .trans .formIMG {
-				height: 100%;
-				width: auto;
-				box-shadow: none;
-			}
-			.transTr .storyIMG, .transTr .memory-gameIMG, .transTr .froggerIMG, .transTr .jasmineIMG, .transTr .universeIMG, .transTr .formIMG {
-				height: 100%;
-				width: auto;
-				box-shadow: none;
-			}
-			.trans .coming {
-				padding-right: 2em;
-				font-size: 12px;
-			}
-			.trans .formImage, .trans .universeImage {
-				position: relative;
-				background-color: rgba(255, 255, 255, 0);
-			}
-			.transTr .formImage, .transTr .universeImage {
-				position: relative;
-				background-color: rgba(255, 255, 255, 0);
-			}
 }
