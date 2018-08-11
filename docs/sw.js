@@ -1,6 +1,6 @@
-const cacheName = 'portfolio-v2';
+const cacheName = 'portfolio-v4';
 const images = '.png';
-const imagesNames = ['frogger-clone', 'jasmine', 'memory-game', 'story-game', 'universe-game', 'myReads', 'restaurant-reviews'];
+const imagesNames = ['frogger-clone', 'jasmine', 'memory-game', 'story-game', 'universe-game', 'myReads', 'restaurant-reviews', 'neighborhood-map'];
 const staticCachables = [
         '/',
         '/js/main.js',

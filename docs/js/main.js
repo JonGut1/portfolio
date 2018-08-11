@@ -2938,7 +2938,7 @@ var Content = function Content() {
 		neighborhoodMap: {
 			title: 'Neighborhood Map App',
 			img: {
-				src: 'img/jasmine.png',
+				src: 'img/neighborhood-map.png',
 				alt: 'An image of a neighborhood map app'
 			},
 			date: 'Jul 30, 2018',
@@ -3281,7 +3281,11 @@ var Events = function (_DOM) {
 
 	function Events() {
 		(0, _classCallCheck3.default)(this, Events);
-		return (0, _possibleConstructorReturn3.default)(this, (Events.__proto__ || (0, _getPrototypeOf2.default)(Events)).call(this));
+
+		var _this4 = (0, _possibleConstructorReturn3.default)(this, (Events.__proto__ || (0, _getPrototypeOf2.default)(Events)).call(this));
+
+		_this4.disableScroll = false;
+		return _this4;
 	}
 
 	(0, _createClass3.default)(Events, [{
@@ -3289,11 +3293,11 @@ var Events = function (_DOM) {
 		value: function openMenu() {
 			var menu = document.querySelector('#pop-menu');
 			if (menu.hasAttribute('open')) {
-				this.body.style.overflow = 'auto';
+				this.disableScroll = false;
 				this.nav.removeAttribute('open', '');
 				menu.removeAttribute('open', '');
 			} else {
-				this.body.style.overflow = 'hidden';
+				this.disableScroll = true;
 				this.nav.setAttribute('open', '');
 				menu.setAttribute('open', '');
 			}
@@ -3344,14 +3348,30 @@ var Events = function (_DOM) {
 			console.log(e.target.textContent === 'Expand -->');
 			if (this.expand) {
 				if (e.target.textContent === 'Expand -->') {
+					this.disableScroll = true;
 					console.log(12123);
 					this.expand = null;
 					this.setExpandOptions(e.target.parentElement.parentElement.parentElement.className, 'expand');
 				}
 			} else if (e.target.parentElement.className === 'exit-button-cont') {
+				this.disableScroll = false;
 				this.expand = true;
 				this.setExpandOptions(e.target.parentElement.parentElement.parentElement.className, 'colapse');
 			}
+		}
+	}, {
+		key: 'createScrollEvent',
+		value: function createScrollEvent(checker) {
+			var _this5 = this;
+
+			this.body.addEventListener('touchmove', function (e) {
+				console.log(e.target);
+				if (e.target.parentElement.className !== 'description-cont') {
+					if (_this5.disableScroll === true) {
+						e.preventDefault();
+					}
+				}
+			}, { passive: false });
 		}
 	}]);
 	return Events;
@@ -3365,6 +3385,7 @@ var events = new Events();
 	addToDOM.manageNav();
 	addToDOM.loadIntro();
 	events.setExpandViewListener();
+	events.createScrollEvent();
 })();
 
 /* adds routing to the page */
@@ -3372,5 +3393,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_39504d65.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_3ad79ea2.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])

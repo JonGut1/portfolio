@@ -5,7 +5,7 @@ class Content {
 			neighborhoodMap: {
 				title: 'Neighborhood Map App',
 				img: {
-					src: `img/jasmine.png`,
+					src: `img/neighborhood-map.png`,
 					alt: `An image of a neighborhood map app`,
 				},
 				date: 'Jul 30, 2018',
@@ -362,15 +362,16 @@ const addToDOM = new DOM();
 class Events extends DOM {
 	constructor() {
 		super();
+		this.disableScroll = false;
 	}
 	openMenu() {
 		const menu = document.querySelector('#pop-menu');
 		if (menu.hasAttribute('open')) {
-			this.body.style.overflow = 'auto';
+			this.disableScroll = false;
 			this.nav.removeAttribute('open', '');
 			menu.removeAttribute('open', '');
 		} else {
-			this.body.style.overflow = 'hidden';
+			this.disableScroll = true;
 			this.nav.setAttribute('open', '');
 			menu.setAttribute('open', '');
 		}
@@ -415,14 +416,27 @@ class Events extends DOM {
 		console.log(e.target.textContent === 'Expand -->');
 		if (this.expand) {
 			if (e.target.textContent === 'Expand -->') {
+				this.disableScroll = true;
 				console.log(12123);
 				this.expand = null;
 				this.setExpandOptions(e.target.parentElement.parentElement.parentElement.className, 'expand');
 			}
 		} else if (e.target.parentElement.className === 'exit-button-cont') {
+			this.disableScroll = false;
 			this.expand = true;
 			this.setExpandOptions(e.target.parentElement.parentElement.parentElement.className, 'colapse');
 		}
+	}
+
+	createScrollEvent(checker) {
+			this.body.addEventListener('touchmove', (e) => {
+				console.log(e.target);
+				if (e.target.parentElement.className !== 'description-cont') {
+					if (this.disableScroll === true) {
+						e.preventDefault();
+					}
+				}
+			}, {passive: false});
 	}
 }
 
@@ -434,6 +448,7 @@ const events = new Events();
 	addToDOM.manageNav();
 	addToDOM.loadIntro();
 	events.setExpandViewListener();
+	events.createScrollEvent();
 }());
 
 /* adds routing to the page */

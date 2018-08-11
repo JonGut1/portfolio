@@ -105,6 +105,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							display: none;
 						}
@@ -131,6 +140,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
@@ -258,6 +268,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							display: none;
 						}
@@ -284,6 +303,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
@@ -400,6 +420,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							display: none;
 						}
@@ -426,6 +455,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
@@ -550,6 +580,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							height: 10%;
 						}
@@ -576,6 +615,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
@@ -700,6 +740,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							height: 10%;
 						}
@@ -726,6 +775,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
@@ -870,6 +920,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							display: none;
 						}
@@ -896,6 +955,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
@@ -1032,6 +1092,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							display: none;
 						}
@@ -1058,6 +1127,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
@@ -1179,6 +1249,15 @@
 						height: 100%;
 						margin: 0;
 
+						::-webkit-scrollbar {
+			    			-webkit-appearance: none;
+			    				width: 5px;
+						}
+						::-webkit-scrollbar-thumb {
+						    background-color: rgba(0, 0, 0, 0.1);
+						    border-radius: 10px;
+						}
+
 						.title-cont {
 							height: 10%;
 						}
@@ -1205,6 +1284,7 @@
 							.description-cont {
 								height: 90%;
 								overflow-y: auto;
+								-webkit-overflow-scrolling: touch;
 							}
 						}
 						.links-cont {
