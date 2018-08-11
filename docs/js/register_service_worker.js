@@ -38,4 +38,4 @@ updateWorker = worker => {
   worker.postMessage({action: 'skipWaiting'});
 }
 
-//serviceWorker();
+serviceWorker();
