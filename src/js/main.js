@@ -1,11 +1,12 @@
 /* page content */
 class Content {
 	constructor() {
+		this.format = 'jpg';
 		this.completedProjects = {
 			neighborhoodMap: {
 				title: 'Neighborhood Map App',
 				img: {
-					src: `img/neighborhood-map.png`,
+					src: `img/neighborhood_map.${this.format}`,
 					alt: `An image of a neighborhood map app`,
 				},
 				date: 'Jul 30, 2018',
@@ -25,7 +26,7 @@ class Content {
 			myReads: {
 				title: 'MyReads App',
 				img: {
-					src: `img/myReads.png`,
+					src: `img/myReads.${this.format}`,
 					alt: `An image of a book app`,
 				},
 				date: 'Jul 14, 2018',
@@ -42,7 +43,7 @@ class Content {
 			restaurantReviewsapp: {
 				title: 'Restaurant Reviews App',
 				img: {
-					src: `img/restaurant-reviews.png`,
+					src: `img/restaurant_reviews.${this.format}`,
 					alt: `An image of a restaurant reviews web page`,
 				},
 				date: 'Jun 25, 2018',
@@ -61,7 +62,7 @@ class Content {
 			jasmineTesting: {
 				title: 'Testing App',
 				img: {
-					src: `img/jasmine.png`,
+					src: `img/jasmine.${this.format}`,
 					alt: `A web page of done tests`,
 				},
 				date: 'May 25, 2018',
@@ -79,7 +80,7 @@ class Content {
 			classicFrogger: {
 				title: 'Classic Frogger Clone',
 				img: {
-					src: `img/frogger-clone.png`,
+					src: `img/frogger_clone.${this.format}`,
 					alt:`An image of a few of menu buttons with a street tile background`,
 				},
 				date: 'May 18, 2018',
@@ -98,7 +99,7 @@ class Content {
 			cardGame: {
 				title: 'Matching Game',
 				img: {
-					src:`img/memory-game.png`,
+					src:`img/memory_game.${this.format}`,
 					alt:`An image 4 by 4 face down cards`,
 				},
 				date: 'May 3, 2018',
@@ -118,7 +119,7 @@ class Content {
 			storyGame: {
 				title: 'Story Game',
 				img: {
-					src:`img/story-game.png`,
+					src:`img/story_game.${this.format}`,
 					alt:`A person stands near a window in a shadowy room`,
 				},
 				date: 'Jun 15, 2017',

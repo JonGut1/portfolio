@@ -2934,11 +2934,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Content = function Content() {
 	(0, _classCallCheck3.default)(this, Content);
 
+	this.format = 'jpg';
 	this.completedProjects = {
 		neighborhoodMap: {
 			title: 'Neighborhood Map App',
 			img: {
-				src: 'img/neighborhood-map.png',
+				src: 'img/neighborhood_map.' + this.format,
 				alt: 'An image of a neighborhood map app'
 			},
 			date: 'Jul 30, 2018',
@@ -2953,7 +2954,7 @@ var Content = function Content() {
 		myReads: {
 			title: 'MyReads App',
 			img: {
-				src: 'img/myReads.png',
+				src: 'img/myReads.' + this.format,
 				alt: 'An image of a book app'
 			},
 			date: 'Jul 14, 2018',
@@ -2968,7 +2969,7 @@ var Content = function Content() {
 		restaurantReviewsapp: {
 			title: 'Restaurant Reviews App',
 			img: {
-				src: 'img/restaurant-reviews.png',
+				src: 'img/restaurant_reviews.' + this.format,
 				alt: 'An image of a restaurant reviews web page'
 			},
 			date: 'Jun 25, 2018',
@@ -2983,7 +2984,7 @@ var Content = function Content() {
 		jasmineTesting: {
 			title: 'Testing App',
 			img: {
-				src: 'img/jasmine.png',
+				src: 'img/jasmine.' + this.format,
 				alt: 'A web page of done tests'
 			},
 			date: 'May 25, 2018',
@@ -2998,7 +2999,7 @@ var Content = function Content() {
 		classicFrogger: {
 			title: 'Classic Frogger Clone',
 			img: {
-				src: 'img/frogger-clone.png',
+				src: 'img/frogger_clone.' + this.format,
 				alt: 'An image of a few of menu buttons with a street tile background'
 			},
 			date: 'May 18, 2018',
@@ -3013,7 +3014,7 @@ var Content = function Content() {
 		cardGame: {
 			title: 'Matching Game',
 			img: {
-				src: 'img/memory-game.png',
+				src: 'img/memory_game.' + this.format,
 				alt: 'An image 4 by 4 face down cards'
 			},
 			date: 'May 3, 2018',
@@ -3028,7 +3029,7 @@ var Content = function Content() {
 		storyGame: {
 			title: 'Story Game',
 			img: {
-				src: 'img/story-game.png',
+				src: 'img/story_game.' + this.format,
 				alt: 'A person stands near a window in a shadowy room'
 			},
 			date: 'Jun 15, 2017',
@@ -3393,5 +3394,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_3ad79ea2.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_498a0293.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])
