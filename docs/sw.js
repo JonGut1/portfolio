@@ -1,6 +1,6 @@
-const cacheName = 'portfolio-v4';
+const cacheName = 'portfolio-v6';
 const images = '.png';
-const imagesNames = ['frogger-clone', 'jasmine', 'memory-game', 'story-game', 'universe-game', 'myReads', 'restaurant-reviews', 'neighborhood-map'];
+const imagesNames = ['frogger_clone', 'jasmine', 'memory_game', 'story_game', 'universe_game', 'myReads', 'restaurant_reviews', 'neighborhood_map'];
 const staticCachables = [
         '/',
         '/js/main.js',
@@ -10,7 +10,7 @@ const staticCachables = [
 ];
 
 for (let i = 1; i < imagesNames.length; i++) {
-  staticCachables.push('img/' + imagesNames[i] + '.png');
+  staticCachables.push('img/' + imagesNames[i] + '.jpg');
 }
 
 /*
@@ -32,7 +32,7 @@ self.addEventListener('activate', event => {
     caches.keys().then( allNames => {
       return Promise.all(
         allNames.filter( name => {
-          if (name != cacheName && name.startsWith('reviews-') === true) {
+          if (name != cacheName && name.startsWith('portfolio-') === true) {
             return name;
           }
         }).map( nameDelete => {
@@ -47,11 +47,6 @@ self.addEventListener('activate', event => {
 * Intercepts fetches.
 */
 self.addEventListener('fetch', event => {
-  /*
-  * checks whether there is current request in the cache
-  * if not, then adds it to the cache.
-  */
-
     /*
     * responds from the cache if the request is available there,
     * if not, then fetches the request as usual.
