@@ -138,7 +138,7 @@ class Content {
 			universeGame: {
 				title: 'Universe Game',
 				img: {
-					src: `img/universe-game.png`,
+					src: `img/universe_game.${this.format}`,
 					alt: `An image of a couple of circles flouting`,
 				},
 				date: '-',
