@@ -26,7 +26,7 @@ class Content {
 			myReads: {
 				title: 'MyReads App',
 				img: {
-					src: `img/myReads.${this.format}`,
+					src: `img/myreads.${this.format}`,
 					alt: `An image of a book app`,
 				},
 				date: 'Jul 14, 2018',
