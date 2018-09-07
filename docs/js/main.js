@@ -3140,7 +3140,9 @@ var DOM = function (_Content) {
 			var readyDescription = '';
 			for (var project in projects) {
 				for (var info in projects[project]['description']) {
-					readyDescription += '<p>' + projects[project]['description'][info] + '</p>';
+					if (projects[project]['description'][info]) {
+						readyDescription += '<p>' + projects[project]['description'][info] + '</p>';
+					}
 				}
 				DOMelements = '<div class="title-cont"><h2>' + projects[project]['title'] + '</h2></div>\n\t\t\t<div class="image-cont">\n\t\t\t<img src=' + projects[project]['img']['src'] + ' alt=' + projects[project]['img']['alt'] + '>\n\t\t\t</div>\n\t\t\t<div tabindex="1" aria-label=\'description\' class="info-cont">\n\t\t\t<div tabindex="1" class="date-cont"><span>' + projects[project]['date'] + '<span></div>\n\t\t\t<div tabindex="1" class="description-cont">' + readyDescription + '</div>\n\t\t\t</div>\n\t\t\t<div tabindex=\'1\' aria-label=\'project links\' class="links-cont"><a tabindex="1" href=' + projects[project]['githubLink'] + '>GitHub</a>' + (projects[project]['demo'] ? '<a tabindex="1" href=' + projects[project]['demo'] + '>Demo</a>' : '<a></a>') + '<a id="' + project + '">Expand --></a></div>';
 				readyDescription = [];
@@ -3246,7 +3248,6 @@ var DOM = function (_Content) {
 				events.removeHamburgerEvents();
 			}
 			window.addEventListener('resize', function () {
-				console.log(window.innerWidth);
 				if (window.innerWidth <= 700) {
 					if (pastWidth > 700) {
 						_this3.deleteNavContent();
@@ -3319,7 +3320,6 @@ var Events = function (_DOM) {
 		key: 'manageNavEvents',
 		value: function manageNavEvents(type) {
 			var popMenu = document.querySelector('#pop-menu');
-			console.log(popMenu);
 			if (type === 'bar') {
 				this.nav.addEventListener('click', this.navEvents);
 			} else if (type === 'ham') {
@@ -3330,7 +3330,6 @@ var Events = function (_DOM) {
 	}, {
 		key: 'navEvents',
 		value: function navEvents(e) {
-			console.log(123123);
 			if (e.target.className === 'listProj' || e.target.className === 'listPr') {
 				addToDOM.loadProjects();
 			} else if (e.target.className === 'listAbout' || e.target.className === 'listAb') {
@@ -3345,12 +3344,9 @@ var Events = function (_DOM) {
 	}, {
 		key: 'expandView',
 		value: function expandView(e) {
-			console.log(this.expand);
-			console.log(e.target.textContent === 'Expand -->');
 			if (this.expand) {
 				if (e.target.textContent === 'Expand -->') {
 					this.disableScroll = true;
-					console.log(12123);
 					this.expand = null;
 					this.setExpandOptions(e.target.parentElement.parentElement.parentElement.className, 'expand');
 				}
@@ -3366,7 +3362,6 @@ var Events = function (_DOM) {
 			var _this5 = this;
 
 			this.body.addEventListener('touchmove', function (e) {
-				console.log(e.target);
 				if (e.target.parentElement.className !== 'description-cont') {
 					if (_this5.disableScroll === true) {
 						e.preventDefault();
@@ -3394,5 +3389,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_b4e3733f.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_84bd5352.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])

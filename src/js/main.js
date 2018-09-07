@@ -226,7 +226,9 @@ class DOM extends Content {
 		let readyDescription = '';
 		for (let project in projects) {
 			for (let info in projects[project]['description']) {
-				readyDescription += `<p>${projects[project]['description'][info]}</p>`;
+				if (projects[project]['description'][info]) {
+					readyDescription += `<p>${projects[project]['description'][info]}</p>`;
+				}
 			}
 			DOMelements = `<div class="title-cont"><h2>${projects[project]['title']}</h2></div>
 			<div class="image-cont">
@@ -332,7 +334,6 @@ class DOM extends Content {
 			events.removeHamburgerEvents();
 		}
 		window.addEventListener('resize', () => {
-			console.log(window.innerWidth);
 			if (window.innerWidth <= 700) {
 				if (pastWidth > 700) {
 					this.deleteNavContent();
@@ -390,7 +391,6 @@ class Events extends DOM {
 
 	manageNavEvents(type) {
 		const popMenu = document.querySelector('#pop-menu');
-		console.log(popMenu);
 		if (type === 'bar') {
 			this.nav.addEventListener('click', this.navEvents);
 		} else if (type === 'ham') {
@@ -400,7 +400,6 @@ class Events extends DOM {
 	}
 
 	navEvents(e) {
-		console.log(123123);
 		if (e.target.className === 'listProj' || e.target.className === 'listPr') {
 			addToDOM.loadProjects();
 		} else if (e.target.className === 'listAbout' || e.target.className === 'listAb') {
@@ -413,12 +412,9 @@ class Events extends DOM {
 	}
 
 	expandView(e) {
-		console.log(this.expand);
-		console.log(e.target.textContent === 'Expand -->');
 		if (this.expand) {
 			if (e.target.textContent === 'Expand -->') {
 				this.disableScroll = true;
-				console.log(12123);
 				this.expand = null;
 				this.setExpandOptions(e.target.parentElement.parentElement.parentElement.className, 'expand');
 			}
@@ -431,7 +427,6 @@ class Events extends DOM {
 
 	createScrollEvent(checker) {
 			this.body.addEventListener('touchmove', (e) => {
-				console.log(e.target);
 				if (e.target.parentElement.className !== 'description-cont') {
 					if (this.disableScroll === true) {
 						e.preventDefault();
