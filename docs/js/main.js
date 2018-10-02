@@ -3057,6 +3057,21 @@ var Content = function Content() {
 			},
 			githubLink: 'https://github.com/JonGut1/jonas-universe',
 			demo: 'https://jongut1.github.io/jonas-universe/'
+		},
+		footballApp: {
+			title: 'Football App',
+			img: {
+				src: 'img/football_app.' + this.format,
+				alt: 'An image of a table'
+			},
+			date: '-',
+			description: {
+				about: 'The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.\n\t\t\t\t\tThen the guess will be evaluated and appropriate scores will be added to the correct guesser. All of the data is saved in multiple json files.',
+				goal: null,
+				tools: 'This project will be made using AngularJs, JavaScript CSS3 and HTML5.'
+			},
+			githubLink: 'https://github.com/JonGut1/football-app',
+			demo: null
 		}
 	};
 
@@ -3389,5 +3404,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_84bd5352.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_461db3c6.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])

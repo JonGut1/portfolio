@@ -150,6 +150,22 @@ class Content {
 				},
 				githubLink: 'https://github.com/JonGut1/jonas-universe',
 				demo: 'https://jongut1.github.io/jonas-universe/',
+			},
+			footballApp: {
+				title: 'Football App',
+				img: {
+					src: `img/football_app.${this.format}`,
+					alt: `An image of a table`,
+				},
+				date: '-',
+				description: {
+					about:`The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.
+					Then the guess will be evaluated and appropriate scores will be added to the correct guesser. All of the data is saved in multiple json files.`,
+					goal: null,
+					tools: `This project will be made using AngularJs, JavaScript CSS3 and HTML5.`,
+				},
+				githubLink: 'https://github.com/JonGut1/football-app',
+				demo: null,
 			}
 		}
 
