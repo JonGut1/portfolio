@@ -11,13 +11,13 @@ class Content {
 				},
 				date: 'Jul 30, 2018',
 				description: {
-					about: `This is a neighborhood map project. \
+					para1: `This is a neighborhood map project. \
 				It let's you search for a location in a hard coded place. \
 				Also you can filter the results by typing a letter or selecting an option from a filter list. \
 				If you want to get more info about a certain place you can click on a marker on the map. \
 				Focus is also managed for easier use with a keyboard`,
-					goal: `This project was made as part of the Udacity Front-End Nanodegree course assignment.`,
-					tools: `This app was built using HTML5, CSS3 and JavaScript, React library. \
+					para2: `This project was made as part of the Udacity Front-End Nanodegree course assignment.`,
+					para3: `This app was built using HTML5, CSS3 and JavaScript, React library. \
 					Also Google Maps api and Foursquare Places api was used in this project`,
 				},
 				githubLink: `https://github.com/JonGut1/NeighborhoodMapApp`,
@@ -31,11 +31,11 @@ class Content {
 				},
 				date: 'Jul 14, 2018',
 				description: {
-					about: `This is a book app that let's you manage your read books, or the books that you want to read. \
+					para1: `This is a book app that let's you manage your read books, or the books that you want to read. \
 				Also let's you search for new books through a "https://reactnd-books-api.udacity.com" api. \
 				Routing is also implemented so that a user could bookmark a page`,
-					goal: `This project was made as part of the Udacity Front-End Nanodegree course assignment.`,
-					tools: `This app was built using HTML5, CSS3 and JavaScript and React library`,
+					para2: `This project was made as part of the Udacity Front-End Nanodegree course assignment.`,
+					para3: `This app was built using HTML5, CSS3 and JavaScript and React library`,
 				},
 				githubLink: `https://github.com/JonGut1/MyReads`,
 				demo: `https://jongut1.github.io/MyReads/`,
@@ -48,13 +48,13 @@ class Content {
 				},
 				date: 'Jun 25, 2018',
 				description: {
-					about: `This is a styling project. \
+					para1: `This is a styling project. \
 				The styling was converted by me, from an unresponsive web page to a responsive one. \
 				Also a service worker is implemented for offline use. \
 				Focus is also managed for easier use with a keyboard`,
-					goal: `This project was made as part of the Udacity Front-End Nanodegree course assignment. \
+					para2: `This project was made as part of the Udacity Front-End Nanodegree course assignment. \
 					The project was assigned to practice styling and responsive web design skills`,
-					tools: `This app was built using HTML5, CSS3 and JavaScript`,
+					para3: `This app was built using HTML5, CSS3 and JavaScript`,
 				},
 				githubLink: `https://github.com/JonGut1/mws-restaurant-stage-1`,
 				demo: null,
@@ -67,12 +67,12 @@ class Content {
 				},
 				date: 'May 25, 2018',
 				description: {
-					about: `This is a testing project. \
+					para1: `This is a testing project. \
 				It tests whether some of the functions of the page are operational. \
 				Such as a side menu is hidden by default, or whether it opens and closes on click. \
 				Checks whether the asynchronous feed has loaded at least one element, etc.`,
-					goal: `This project was made as part of the Udacity Front-End Nanodegree course assignment.`,
-					tools: `The testing was done using jasmine which is done by using JavaScript`,
+					para2: `This project was made as part of the Udacity Front-End Nanodegree course assignment.`,
+					para3: `The testing was done using jasmine which is done by using JavaScript`,
 				},
 				githubLink: `https://github.com/JonGut1/jasmine-testing`,
 				demo: null,
@@ -85,12 +85,12 @@ class Content {
 				},
 				date: 'May 18, 2018',
 				description: {
-					about:`This game is a classic frogger game clone.
+					para1:`This game is a classic frogger game clone.
 					The game is played out by navigating the character to the river at the top of the screen.
 					The movement is done by the arrow keys on the keyboard or on the screen if the player plays it on a mobile device.
 					The game counts score and the player can log his score into the local storage.`,
-					goal: `This game was made as part of the Udacity Front-End Nanodegree course assignment.`,
-					tools: `This project was made using JavaScript CSS3 and HTML5 and HTML5 canvas.
+					para2: `This game was made as part of the Udacity Front-End Nanodegree course assignment.`,
+					para3: `This project was made using JavaScript CSS3 and HTML5 and HTML5 canvas.
 					Most of the code was written by me, though a recource.js file and a basic game loop was provided by the course.`,
 				},
 				githubLink: `https://github.com/JonGut1/frogger-clone`,
@@ -104,12 +104,12 @@ class Content {
 				},
 				date: 'May 3, 2018',
 				description: {
-					about:`This is a matching game.
+					para1:`This is a matching game.
 					The player has to match two cards in order to progress through the game.
 					The players compete by matching the cards as fast as possible in order to gain more score.
 					Also players can save there scores in a local storage.`,
-					goal: `The game was programmed as part of the Udacity Front-End Nanodegree course assignment.`,
-					tools: `This project was made using JavaScript CSS3 and HTML5.
+					para2: `The game was programmed as part of the Udacity Front-End Nanodegree course assignment.`,
+					para3: `This project was made using JavaScript CSS3 and HTML5.
 					All of the code was researched and written by me, excluding one function that is responsible for shuffling cards.
 					This function was provided by the course`,
 				},
@@ -124,11 +124,11 @@ class Content {
 				},
 				date: 'Jun 15, 2017',
 				description: {
-					about:`This is a story game which requires to answer question and proceed to the next level if answered correctly.
+					para1:`This is a story game which requires to answer question and proceed to the next level if answered correctly.
 					Some of the questions are timed, and if the time runs out you might lose the game.`,
-					goal: `The game was done as part of the Game Design and Development course.
+					para2: `The game was done as part of the Game Design and Development course.
 					The requirements were to use the haxe language and use a local database so that all of the information and the questions would be loaded from it.`,
-					tools: `The game was made using Haxe programming language. Also some of the code regarding the screen switcher was provided by the course.`,
+					para3: `The game was made using Haxe programming language. Also some of the code regarding the screen switcher was provided by the course.`,
 				},
 				githubLink: `https://github.com/JonGut1/story-game`,
 				demo: null,
@@ -143,10 +143,9 @@ class Content {
 				},
 				date: '-',
 				description: {
-					about:`The core of this game will be to experience gravity and various cosmic objects by controlling them in a gravity driven environtment.
+					para1:`The core of this game will be to experience gravity and various cosmic objects by controlling them in a gravity driven environtment.
 					The game is still in early development, thus there are no gameplay features that could be shown off.`,
-					goal: null,
-					tools: `This project will be made using JavaScript CSS3 and HTML5 and HTML5 canvas.`,
+					para2: `This project will be made using JavaScript CSS3 and HTML5 and HTML5 canvas.`,
 				},
 				githubLink: 'https://github.com/JonGut1/jonas-universe',
 				demo: 'https://jongut1.github.io/jonas-universe/',
@@ -159,10 +158,9 @@ class Content {
 				},
 				date: '-',
 				description: {
-					about:`The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.
+					para1:`The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.
 					Then the guess will be evaluated and appropriate scores will be added to the correct guesser. All of the data is saved in multiple json files.`,
-					goal: null,
-					tools: `This project will be made using AngularJs, JavaScript CSS3 and HTML5.`,
+					para2: `This project will be made using AngularJs, JavaScript CSS3 and HTML5.`,
 				},
 				githubLink: 'https://github.com/JonGut1/football-app',
 				demo: null,

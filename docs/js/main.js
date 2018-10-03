@@ -2944,9 +2944,9 @@ var Content = function Content() {
 			},
 			date: 'Jul 30, 2018',
 			description: {
-				about: 'This is a neighborhood map project. \t\t\t\tIt let\'s you search for a location in a hard coded place. \t\t\t\tAlso you can filter the results by typing a letter or selecting an option from a filter list. \t\t\t\tIf you want to get more info about a certain place you can click on a marker on the map. \t\t\t\tFocus is also managed for easier use with a keyboard',
-				goal: 'This project was made as part of the Udacity Front-End Nanodegree course assignment.',
-				tools: 'This app was built using HTML5, CSS3 and JavaScript, React library. \t\t\t\t\tAlso Google Maps api and Foursquare Places api was used in this project'
+				para1: 'This is a neighborhood map project. \t\t\t\tIt let\'s you search for a location in a hard coded place. \t\t\t\tAlso you can filter the results by typing a letter or selecting an option from a filter list. \t\t\t\tIf you want to get more info about a certain place you can click on a marker on the map. \t\t\t\tFocus is also managed for easier use with a keyboard',
+				para2: 'This project was made as part of the Udacity Front-End Nanodegree course assignment.',
+				para3: 'This app was built using HTML5, CSS3 and JavaScript, React library. \t\t\t\t\tAlso Google Maps api and Foursquare Places api was used in this project'
 			},
 			githubLink: 'https://github.com/JonGut1/NeighborhoodMapApp',
 			demo: 'https://jongut1.github.io/NeighborhoodMapApp/'
@@ -2959,9 +2959,9 @@ var Content = function Content() {
 			},
 			date: 'Jul 14, 2018',
 			description: {
-				about: 'This is a book app that let\'s you manage your read books, or the books that you want to read. \t\t\t\tAlso let\'s you search for new books through a "https://reactnd-books-api.udacity.com" api. \t\t\t\tRouting is also implemented so that a user could bookmark a page',
-				goal: 'This project was made as part of the Udacity Front-End Nanodegree course assignment.',
-				tools: 'This app was built using HTML5, CSS3 and JavaScript and React library'
+				para1: 'This is a book app that let\'s you manage your read books, or the books that you want to read. \t\t\t\tAlso let\'s you search for new books through a "https://reactnd-books-api.udacity.com" api. \t\t\t\tRouting is also implemented so that a user could bookmark a page',
+				para2: 'This project was made as part of the Udacity Front-End Nanodegree course assignment.',
+				para3: 'This app was built using HTML5, CSS3 and JavaScript and React library'
 			},
 			githubLink: 'https://github.com/JonGut1/MyReads',
 			demo: 'https://jongut1.github.io/MyReads/'
@@ -2974,9 +2974,9 @@ var Content = function Content() {
 			},
 			date: 'Jun 25, 2018',
 			description: {
-				about: 'This is a styling project. \t\t\t\tThe styling was converted by me, from an unresponsive web page to a responsive one. \t\t\t\tAlso a service worker is implemented for offline use. \t\t\t\tFocus is also managed for easier use with a keyboard',
-				goal: 'This project was made as part of the Udacity Front-End Nanodegree course assignment. \t\t\t\t\tThe project was assigned to practice styling and responsive web design skills',
-				tools: 'This app was built using HTML5, CSS3 and JavaScript'
+				para1: 'This is a styling project. \t\t\t\tThe styling was converted by me, from an unresponsive web page to a responsive one. \t\t\t\tAlso a service worker is implemented for offline use. \t\t\t\tFocus is also managed for easier use with a keyboard',
+				para2: 'This project was made as part of the Udacity Front-End Nanodegree course assignment. \t\t\t\t\tThe project was assigned to practice styling and responsive web design skills',
+				para3: 'This app was built using HTML5, CSS3 and JavaScript'
 			},
 			githubLink: 'https://github.com/JonGut1/mws-restaurant-stage-1',
 			demo: null
@@ -2989,9 +2989,9 @@ var Content = function Content() {
 			},
 			date: 'May 25, 2018',
 			description: {
-				about: 'This is a testing project. \t\t\t\tIt tests whether some of the functions of the page are operational. \t\t\t\tSuch as a side menu is hidden by default, or whether it opens and closes on click. \t\t\t\tChecks whether the asynchronous feed has loaded at least one element, etc.',
-				goal: 'This project was made as part of the Udacity Front-End Nanodegree course assignment.',
-				tools: 'The testing was done using jasmine which is done by using JavaScript'
+				para1: 'This is a testing project. \t\t\t\tIt tests whether some of the functions of the page are operational. \t\t\t\tSuch as a side menu is hidden by default, or whether it opens and closes on click. \t\t\t\tChecks whether the asynchronous feed has loaded at least one element, etc.',
+				para2: 'This project was made as part of the Udacity Front-End Nanodegree course assignment.',
+				para3: 'The testing was done using jasmine which is done by using JavaScript'
 			},
 			githubLink: 'https://github.com/JonGut1/jasmine-testing',
 			demo: null
@@ -3004,9 +3004,9 @@ var Content = function Content() {
 			},
 			date: 'May 18, 2018',
 			description: {
-				about: 'This game is a classic frogger game clone.\n\t\t\t\t\tThe game is played out by navigating the character to the river at the top of the screen.\n\t\t\t\t\tThe movement is done by the arrow keys on the keyboard or on the screen if the player plays it on a mobile device.\n\t\t\t\t\tThe game counts score and the player can log his score into the local storage.',
-				goal: 'This game was made as part of the Udacity Front-End Nanodegree course assignment.',
-				tools: 'This project was made using JavaScript CSS3 and HTML5 and HTML5 canvas.\n\t\t\t\t\tMost of the code was written by me, though a recource.js file and a basic game loop was provided by the course.'
+				para1: 'This game is a classic frogger game clone.\n\t\t\t\t\tThe game is played out by navigating the character to the river at the top of the screen.\n\t\t\t\t\tThe movement is done by the arrow keys on the keyboard or on the screen if the player plays it on a mobile device.\n\t\t\t\t\tThe game counts score and the player can log his score into the local storage.',
+				para2: 'This game was made as part of the Udacity Front-End Nanodegree course assignment.',
+				para3: 'This project was made using JavaScript CSS3 and HTML5 and HTML5 canvas.\n\t\t\t\t\tMost of the code was written by me, though a recource.js file and a basic game loop was provided by the course.'
 			},
 			githubLink: 'https://github.com/JonGut1/frogger-clone',
 			demo: 'https://jongut1.github.io/frogger-clone/'
@@ -3019,9 +3019,9 @@ var Content = function Content() {
 			},
 			date: 'May 3, 2018',
 			description: {
-				about: 'This is a matching game.\n\t\t\t\t\tThe player has to match two cards in order to progress through the game.\n\t\t\t\t\tThe players compete by matching the cards as fast as possible in order to gain more score.\n\t\t\t\t\tAlso players can save there scores in a local storage.',
-				goal: 'The game was programmed as part of the Udacity Front-End Nanodegree course assignment.',
-				tools: 'This project was made using JavaScript CSS3 and HTML5.\n\t\t\t\t\tAll of the code was researched and written by me, excluding one function that is responsible for shuffling cards.\n\t\t\t\t\tThis function was provided by the course'
+				para1: 'This is a matching game.\n\t\t\t\t\tThe player has to match two cards in order to progress through the game.\n\t\t\t\t\tThe players compete by matching the cards as fast as possible in order to gain more score.\n\t\t\t\t\tAlso players can save there scores in a local storage.',
+				para2: 'The game was programmed as part of the Udacity Front-End Nanodegree course assignment.',
+				para3: 'This project was made using JavaScript CSS3 and HTML5.\n\t\t\t\t\tAll of the code was researched and written by me, excluding one function that is responsible for shuffling cards.\n\t\t\t\t\tThis function was provided by the course'
 			},
 			githubLink: 'https://github.com/JonGut1/memory-game',
 			demo: 'https://jongut1.github.io/memory-game/'
@@ -3034,9 +3034,9 @@ var Content = function Content() {
 			},
 			date: 'Jun 15, 2017',
 			description: {
-				about: 'This is a story game which requires to answer question and proceed to the next level if answered correctly.\n\t\t\t\t\tSome of the questions are timed, and if the time runs out you might lose the game.',
-				goal: 'The game was done as part of the Game Design and Development course.\n\t\t\t\t\tThe requirements were to use the haxe language and use a local database so that all of the information and the questions would be loaded from it.',
-				tools: 'The game was made using Haxe programming language. Also some of the code regarding the screen switcher was provided by the course.'
+				para1: 'This is a story game which requires to answer question and proceed to the next level if answered correctly.\n\t\t\t\t\tSome of the questions are timed, and if the time runs out you might lose the game.',
+				para2: 'The game was done as part of the Game Design and Development course.\n\t\t\t\t\tThe requirements were to use the haxe language and use a local database so that all of the information and the questions would be loaded from it.',
+				para3: 'The game was made using Haxe programming language. Also some of the code regarding the screen switcher was provided by the course.'
 			},
 			githubLink: 'https://github.com/JonGut1/story-game',
 			demo: null
@@ -3051,9 +3051,8 @@ var Content = function Content() {
 			},
 			date: '-',
 			description: {
-				about: 'The core of this game will be to experience gravity and various cosmic objects by controlling them in a gravity driven environtment.\n\t\t\t\t\tThe game is still in early development, thus there are no gameplay features that could be shown off.',
-				goal: null,
-				tools: 'This project will be made using JavaScript CSS3 and HTML5 and HTML5 canvas.'
+				para1: 'The core of this game will be to experience gravity and various cosmic objects by controlling them in a gravity driven environtment.\n\t\t\t\t\tThe game is still in early development, thus there are no gameplay features that could be shown off.',
+				para2: 'This project will be made using JavaScript CSS3 and HTML5 and HTML5 canvas.'
 			},
 			githubLink: 'https://github.com/JonGut1/jonas-universe',
 			demo: 'https://jongut1.github.io/jonas-universe/'
@@ -3066,9 +3065,8 @@ var Content = function Content() {
 			},
 			date: '-',
 			description: {
-				about: 'The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.\n\t\t\t\t\tThen the guess will be evaluated and appropriate scores will be added to the correct guesser. All of the data is saved in multiple json files.',
-				goal: null,
-				tools: 'This project will be made using AngularJs, JavaScript CSS3 and HTML5.'
+				para1: 'The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.\n\t\t\t\t\tThen the guess will be evaluated and appropriate scores will be added to the correct guesser. All of the data is saved in multiple json files.',
+				para2: 'This project will be made using AngularJs, JavaScript CSS3 and HTML5.'
 			},
 			githubLink: 'https://github.com/JonGut1/football-app',
 			demo: null
@@ -3404,5 +3402,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_461db3c6.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_8ad69b59.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])

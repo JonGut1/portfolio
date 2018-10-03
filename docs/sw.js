@@ -1,4 +1,4 @@
-const cacheName = 'portfolio-v1';
+const cacheName = 'portfolio-v3';
 const images = '.png';
 const imagesNames = ['frogger_clone', 'jasmine', 'memory_game', 'story_game', 'universe_game', 'myreads', 'restaurant_reviews', 'neighborhood_map', 'football_app'];
 const staticCachables = [
@@ -54,7 +54,7 @@ self.addEventListener('fetch', event => {
   	event.respondWith(
       	caches.match(event.request).then( response => {
 
-          if (response != undefined) {
+          if (response !== undefined) {
         		return response;
           } else {
             return fetch(event.request);
@@ -64,7 +64,7 @@ self.addEventListener('fetch', event => {
 });
 
 /*
-* Listenes for the skipWaiting message from dbhelper.js
+* Listenes for the skipWaiting message
 */
 self.addEventListener('message', event => {
   //console.log(event.data);
