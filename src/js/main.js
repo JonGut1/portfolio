@@ -3,6 +3,21 @@ class Content {
 	constructor() {
 		this.format = 'jpg';
 		this.completedProjects = {
+			footballApp: {
+				title: 'Football App',
+				img: {
+					src: `img/football_app.${this.format}`,
+					alt: `An image of a table`,
+				},
+				date: 'Oct 08, 2018',
+				description: {
+					para1:`n this app you can insert scores into a database and the app will automatically fetch the results
+					of the Football World Cup 2018 match and will insert into a leaderboard.`,
+					para2: `This project is made using AngularJs, JavaScript CSS3 and HTML5, PHP.`,
+				},
+				githubLink: 'https://github.com/JonGut1/football-app',
+				demo: null,
+			},
 			neighborhoodMap: {
 				title: 'Neighborhood Map App',
 				img: {
@@ -150,21 +165,6 @@ class Content {
 				githubLink: 'https://github.com/JonGut1/jonas-universe',
 				demo: 'https://jongut1.github.io/jonas-universe/',
 			},
-			footballApp: {
-				title: 'Football App',
-				img: {
-					src: `img/football_app.${this.format}`,
-					alt: `An image of a table`,
-				},
-				date: '-',
-				description: {
-					para1:`The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.
-					Then the guess will be evaluated and appropriate scores will be added to the correct guesser. All of the data is saved in multiple json files.`,
-					para2: `This project will be made using AngularJs, JavaScript CSS3 and HTML5.`,
-				},
-				githubLink: 'https://github.com/JonGut1/football-app',
-				demo: null,
-			}
 		}
 
 		this.about = {

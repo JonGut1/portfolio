@@ -2936,6 +2936,20 @@ var Content = function Content() {
 
 	this.format = 'jpg';
 	this.completedProjects = {
+		footballApp: {
+			title: 'Football App',
+			img: {
+				src: 'img/football_app.' + this.format,
+				alt: 'An image of a table'
+			},
+			date: 'Oct 08, 2018',
+			description: {
+				para1: 'n this app you can insert scores into a database and the app will automatically fetch the results\n\t\t\t\t\tof the Football World Cup 2018 match and will insert into a leaderboard.',
+				para2: 'This project is made using AngularJs, JavaScript CSS3 and HTML5, PHP.'
+			},
+			githubLink: 'https://github.com/JonGut1/football-app',
+			demo: null
+		},
 		neighborhoodMap: {
 			title: 'Neighborhood Map App',
 			img: {
@@ -3056,20 +3070,6 @@ var Content = function Content() {
 			},
 			githubLink: 'https://github.com/JonGut1/jonas-universe',
 			demo: 'https://jongut1.github.io/jonas-universe/'
-		},
-		footballApp: {
-			title: 'Football App',
-			img: {
-				src: 'img/football_app.' + this.format,
-				alt: 'An image of a table'
-			},
-			date: '-',
-			description: {
-				para1: 'The app will let for a user to type in a matches outcome and later the match details will be fetched and compared with the guess.\n\t\t\t\t\tThen the guess will be evaluated and appropriate scores will be added to the correct guesser. All of the data is saved in multiple json files.',
-				para2: 'This project will be made using AngularJs, JavaScript CSS3 and HTML5.'
-			},
-			githubLink: 'https://github.com/JonGut1/football-app',
-			demo: null
 		}
 	};
 
@@ -3402,5 +3402,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_8ad69b59.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_9ee8b3fe.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])
