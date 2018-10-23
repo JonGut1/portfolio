@@ -3066,10 +3066,10 @@ var Content = function Content() {
 			date: '-',
 			description: {
 				para1: 'The core of this game will be to experience gravity and various cosmic objects by controlling them in a gravity driven environtment.\n\t\t\t\t\tThe game is still in early development, thus there are no gameplay features that could be shown off.',
-				para2: 'This project will be made using JavaScript CSS3 and HTML5 and HTML5 canvas.'
+				para2: 'This project will be made using JavaScript CSS3 and HTML5, HTML5 canvas, WebGl, Three.js.'
 			},
-			githubLink: 'https://github.com/JonGut1/jonas-universe',
-			demo: 'https://jongut1.github.io/jonas-universe/'
+			githubLink: 'https://github.com/JonGut1/Universe-Game',
+			demo: null
 		}
 	};
 
@@ -3402,5 +3402,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_9ee8b3fe.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_485bca0.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])

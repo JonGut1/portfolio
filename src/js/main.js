@@ -160,10 +160,10 @@ class Content {
 				description: {
 					para1:`The core of this game will be to experience gravity and various cosmic objects by controlling them in a gravity driven environtment.
 					The game is still in early development, thus there are no gameplay features that could be shown off.`,
-					para2: `This project will be made using JavaScript CSS3 and HTML5 and HTML5 canvas.`,
+					para2: `This project will be made using JavaScript CSS3 and HTML5, HTML5 canvas, WebGl, Three.js.`,
 				},
-				githubLink: 'https://github.com/JonGut1/jonas-universe',
-				demo: 'https://jongut1.github.io/jonas-universe/',
+				githubLink: 'https://github.com/JonGut1/Universe-Game',
+				demo: null,
 			},
 		}
 
