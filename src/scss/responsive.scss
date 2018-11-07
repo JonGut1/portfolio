@@ -20,10 +20,7 @@
 
 			&[expand=''] {
 				width: 90%;
-				left: 5%;
-				right: 5%;
-				top: 5%;
-				bottom: 5%;
+
 			}
 		}
 
@@ -41,10 +38,7 @@
 
 			&[expand=''] {
 				width: 90%;
-				left: 5%;
-				right: 5%;
-				top: 5%;
-				bottom: 5%;
+
 			}
 		}
 	}
@@ -55,10 +49,65 @@
 		font-size: 1em;
 	}
 
-	body #completed-projects, body #in-progress-projects {
+	body #in-progress-projects {
+		@keyframes popDifferent {
+		    from {transform: translateY(110%);}
+    		to {transform: translateY(0%);}
+		}
+
+		.clone {
+			height: 24em;
+			width: 37em;
+		}
+
+		li {
+			width: 37em;
+			height: 24em;
+
+				/* ---------------------- expand view (START) -------------------------- */
+			&[expand=''] {
+				animation-name: popDifferent;
+    			animation-duration: 0.3s;
+    			transform: translateY(0%);
+    			top: 0%;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				.project-card-cont {
+
+					.title-cont {
+						font-size: 0.5em;
+					}
+
+					.image-cont {
+						border-radius: 0px;
+					}
+
+					.image-cont:before {
+						border-radius: 0px;
+					}
+
+					.links-cont {
+						font-size: 0.5em;
+					}
+
+					.description-cont {
+						font-size: 0.7em;
+						padding-right: 0.5em;
+						padding-left: 0.5em;
+					}
+				}
+			}
+
+			/* ---------------------- expand view (END) -------------------------- */
+		}
+
+	}
+
+	body #completed-projects {
 		@keyframes pop {
-    		from {left: 40%; right: 40%; top: 100%; bottom: 190%; width: 10%; height: 10%;}
-    		to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
+    		from {transform: translateY(130%);}
+    		to {transform: translateY(0%);}
 		}
 
 		.clone {
@@ -74,12 +123,10 @@
 			&[expand=''] {
 				animation-name: pop;
     			animation-duration: 0.3s;
+    			transform: translateY(0%);
 				width: 100%;
 				height: 100%;
-				left: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
+				top: 0%;
 				margin: 0;
 				.project-card-cont {
 
@@ -118,10 +165,10 @@
 		font-size: 1em;
 	}
 
-	body #completed-projects, body #in-progress-projects {
-		@keyframes pop {
-		    from {left: 25%; right: 25%; top: 100%; bottom: 190%; width: 50%; height: 50%;}
-		    to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
+	body #in-progress-projects {
+		@keyframes popDifferent {
+		    from {transform: translateY(110%);}
+    		to {transform: translateY(0%);}
 		}
 
 		.clone {
@@ -135,14 +182,68 @@
 
 				/* ---------------------- expand view (START) -------------------------- */
 			&[expand=''] {
-				animation-name: pop;
+				animation-name: popDifferent;
     			animation-duration: 0.3s;
+    			transform: translateY(0%);
+    			top: 0%;
 				width: 100%;
 				height: 100%;
-				left: 0;
-				right: 0;
+				margin: 0;
+				.project-card-cont {
+
+					.title-cont {
+						font-size: 0.5em;
+					}
+
+					.image-cont {
+						border-radius: 0px;
+					}
+
+					.image-cont:before {
+						border-radius: 0px;
+					}
+
+					.links-cont {
+						font-size: 0.5em;
+					}
+
+					.description-cont {
+						font-size: 0.7em;
+						padding-right: 0.5em;
+						padding-left: 0.5em;
+					}
+				}
+			}
+
+			/* ---------------------- expand view (END) -------------------------- */
+		}
+
+	}
+
+	body #completed-projects {
+		@keyframes pop {
+		    from {transform: translateY(110%);}
+    		to {transform: translateY(0%);}
+		}
+
+		.clone {
+			height: 17em;
+			width: 30em;
+		}
+
+		li {
+			width: 30em;
+			height: 17em;
+
+				/* ---------------------- expand view (START) -------------------------- */
+			&[expand=''] {
+				position: fixed;
+				animation-name: pop;
+    			animation-duration: 0.3s;
+    			transform: translateY(0%);
+				width: 100%;
+				height: 100%;
 				top: 0;
-				bottom: 0;
 				margin: 0;
 				.project-card-cont {
 
