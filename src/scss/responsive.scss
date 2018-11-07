@@ -1,1321 +1,164 @@
 @import 'themes';
 
 
-/* smartphones */
-@media screen and (max-width: 450px) {
-	header {
-		.intro {
-			font-size: 1.5em;
-		}
-	}
-
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: center;
-			width: 100%;
-			li {
-				margin: 0;
-				margin-bottom: 1em;
-				margin-top: 1em;
-				height: 30em;
-				width: 100%;
-				border: 1px solid silver;
-
-				.project-card-cont {
-						flex-direction: column;
-						border-radius: 0;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								width: 95%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 0;
-					right: 0;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
-					}
-
-					.exit-button-cont {
-						width: 2em;
-						height: 2em;
-
-						button {
-							font-size: 1em;
-						}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						border-radius: 0;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							display: none;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 50%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		.about-content {
-			width: 100%;
-
-			.about-cont {
-				width: 90%;
-
-				p {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
-/* smartphones */
-@media screen and (max-width: 760px) and (min-width: 451px) {
-	header {
-		.intro {
-			font-size: 1.5em;
-		}
-	}
-
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: center;
-			width: 100%;
-			li {
-				margin: 0;
-				margin-bottom: 1em;
-				margin-top: 1em;
-				height: 30em;
-				width: 90%;
-
-				.project-card-cont {
-						flex-direction: column;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-							border-radius: 5px 5px 0px 0px;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								border-radius: 5px;
-								height: 100%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 5%;
-					right: 5%;
-					left: 5%;
-					top: 5%;
-					width: 90%;
-					height: 90%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 5%; right: 5%; top: 5%; bottom: 5%; width: 90%; height: 90%;}
-					}
-
-					.exit-button-cont {
-						width: 2em;
-						height: 2em;
-
-						button {
-							font-size: 1em;
-						}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						border-radius: 0;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							display: none;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 50%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		.about-content {
-			width: 100%;
-
-			.about-cont {
-				width: 90%;
-
-				p {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
-/* tablets */
-@media screen and (max-width: 1000px) and (min-width: 761px) {
-	header {
-		.intro {
-			font-size: 1.5em;
-		}
-	}
-
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: center;
-			width: 100%;
-			li {
-				margin: 1em;
-				margin-top: 2em;
-				height: 20em;
-				width: 25em;
-				.project-card-cont {
-						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-						flex-direction: row;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-							border-radius: 5px 5px 0px 0px;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								border-radius: 5px;
-								height: 100%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 50%;
-							height: 80%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 5%;
-					right: 5%;
-					left: 5%;
-					top: 5%;
-					width: 90%;
-					height: 90%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							display: none;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 50%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
-			content: '';
-			margin: 1em;
-			margin-top: 2em;
-			height: 0;
-			width: 25em;
-		}
-
-		.about-content {
-			width: 100%;
-
-			.about-cont {
-				width: 90%;
-
-				p {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
-/* big tablets smaller computers */
-@media screen and (max-width: 1140px) and (min-width: 1001px) {
-	header {
-		.intro {
-			font-size: 2em;
-		}
-	}
-
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: space-between;
-			width: 90%;
-			li {
-				margin: 1em;
-				margin-top: 2em;
-				height: 20em;
-				width: 30em;
-				.project-card-cont {
-						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-						flex-direction: row;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-							border-radius: 5px 5px 0px 0px;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								border-radius: 5px;
-								height: 100%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 50%;
-							height: 80%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 5%;
-					right: 5%;
-					left: 5%;
-					top: 5%;
-					width: 90%;
-					height: 90%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							height: 10%;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 40%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
-			content: '';
-			margin: 1em;
-			margin-top: 2em;
-			height: 0;
-			width: 25em;
-		}
-
-		.about-content {
-			width: 70%;
-
-			.about-cont {
-				width: 90%;
-
-				p {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
-/* large screens */
-@media screen and (max-width: 1300px) and (min-width: 1141px) {
-	header {
-		.intro {
-			font-size: 2em;
-		}
-	}
-
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: space-between;
-			width: 100%;
-			li {
-				margin: 1em;
-				margin-top: 2em;
-				height: 20em;
-				width: 25em;
-				.project-card-cont {
-						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-						flex-direction: row;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-							border-radius: 5px 5px 0px 0px;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								border-radius: 5px;
-								height: 100%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 50%;
-							height: 80%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 5%;
-					right: 5%;
-					left: 5%;
-					top: 5%;
-					width: 90%;
-					height: 90%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							height: 10%;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 40%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
-			content: '';
-			margin: 1em;
-			margin-top: 2em;
-			height: 0;
-			width: 25em;
-		}
-
-		.about-content {
-			width: 70%;
-
-			.about-cont {
-				width: 90%;
-
-				p {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
-/* landscape smartphones */
-@media screen and (max-height: 420px) and (min-height: 351px) {
-	header {
-		.intro {
-			font-size: 1.5em;
-		}
-
-		nav {
-			height: 3em;
-
-			&[fixed='true'] {
-				height: 3em;
-			}
-		}
-	}
-
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: center;
-			width: 100%;
-			li {
-				margin: 1em;
-				margin-bottom: 1em;
-				margin-top: 2em;
-				height: 20em;
-				width: 20em;
-
-				.project-card-cont {
-						flex-direction: row;
-						border-radius: 20px;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								width: 95%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 50%;
-							height: 80%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 0;
-					right: 0;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
-					}
-
-					.exit-button-cont {
-						width: 2em;
-						height: 2em;
-
-						button {
-							font-size: 1em;
-						}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						border-radius: 0;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							display: none;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 50%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 40%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		.about-content {
-			width: 100%;
-
-			.about-cont {
-				width: 90%;
-
-				p {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
-/* landscape smartphones */
-@media screen and (max-height: 350px) {
-	header {
-		.intro {
-			font-size: 1.5em;
-		}
-
-		nav {
-			height: 3em;
-
-			&[fixed='true'] {
-				height: 3em;
-			}
-		}
-	}
-
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: center;
-			width: 100%;
-			li {
-				margin: 1em;
-				margin-bottom: 1em;
-				margin-top: 2em;
-				height: 20em;
-				width: 30em;
-
-				.project-card-cont {
-						flex-direction: row;
-						border-radius: 20px;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								width: 95%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 50%;
-							height: 80%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 0;
-					right: 0;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 0%; right: 0%; top: 0%; bottom: 0%; width: 100%; height: 100%;}
-					}
-
-					.exit-button-cont {
-						width: 2em;
-						height: 2em;
-
-						button {
-							font-size: 1em;
-						}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						border-radius: 0;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							display: none;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 50%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 40%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		.about-content {
-			width: 100%;
-
-			.about-cont {
-				width: 90%;
-
-				p {
-					width: 100%;
-				}
-			}
-		}
-	}
-}
-
-@media screen and (min-width: 1301px) {
-	header {
-		.intro {
-			font-size: 2em;
-		}
-	}
-
-	main {
-		width: 1301px;
+@media screen and (min-width: 1250px) {
+	body #completed-projects, #in-progress-projects {
+		max-width: 1280px;
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
 
-	main {
-		section {
-			margin-bottom: 1em;
-		}
-		#in-progress-projects {
-			margin-bottom: 7em;
-		}
-		#completed-projects, #in-progress-projects {
-			justify-content: space-between;
-			width: 100%;
-			li {
-				margin: 1em;
-				margin-top: 2em;
-				height: 20em;
-				width: 25em;
-				.project-card-cont {
-						box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
-						flex-direction: row;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						.title-cont {
-							height: 15%;
-							border-radius: 5px 5px 0px 0px;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 100%;
-
-							img {
-								border-radius: 5px;
-								height: 100%;
-								object-fit: cover;
-							}
-						}
-
-						.info-cont {
-							width: 50%;
-							height: 80%;
-							padding: 1em;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: hidden;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				.exit-button-cont {
-					top: 1%;
-					right: 0%;
-				}
-
-				&[expand=''] {
-					bottom: 5%;
-					right: 5%;
-					left: 5%;
-					top: 5%;
-					width: 90%;
-					height: 90%;
-					margin: 0;
-					animation-name: pop;
-					animation-duration: 0.2;
-
-					@keyframes pop {
-    					from {left: 50%; right: 50%; top: 50%; bottom: 50%; width: 0%; height: 0%;}
-    					to {left: 5%; right: 5%; top: 5%; bottom: 0%; width: 90%; height: 90%;}
-					}
-
-					.project-card-cont {
-						flex-direction: column;
-						width: 100%;
-						height: 100%;
-						margin: 0;
-
-						::-webkit-scrollbar {
-			    			-webkit-appearance: none;
-			    				width: 5px;
-						}
-						::-webkit-scrollbar-thumb {
-						    background-color: rgba(0, 0, 0, 0.1);
-						    border-radius: 10px;
-						}
-
-						.title-cont {
-							height: 10%;
-						}
-
-						.image-cont {
-							width: 100%;
-							height: 40%;
-							padding: 1em;
-
-							img {
-								width: auto;
-								height: 100%;
-							}
-						}
-
-						.info-cont {
-							width: 100%;
-							height: 40%;
-
-							.date-cont {
-								height: 10%;
-							}
-
-							.description-cont {
-								height: 90%;
-								overflow-y: auto;
-								-webkit-overflow-scrolling: touch;
-							}
-						}
-						.links-cont {
-							border-top: 1px solid silver;
-							height: 10%;
-						}
-					}
-				}
-			}
-		}
-
-		#completed-projects:last-child:after, #in-progress-projects:last-child:after {
-			content: '';
-			margin: 1em;
-			margin-top: 2em;
-			height: 0;
+@media screen and (max-width: 900px) {
+	 body #completed-projects, #in-progress-projects {
+	 	.clone {
 			width: 25em;
 		}
 
-		.about-content {
-			width: 70%;
+		li {
+			width: 25em;
 
-			.about-cont {
+			&[expand=''] {
 				width: 90%;
-
-				p {
-					width: 100%;
-				}
+				left: 5%;
+				right: 5%;
+				top: 5%;
+				bottom: 5%;
 			}
 		}
+
+	}
+}
+
+@media screen and (max-width: 770px) {
+	body #completed-projects, #in-progress-projects {
+		.clone {
+			width: 20em;
+		}
+
+		li {
+			width: 20em;
+
+			&[expand=''] {
+				width: 90%;
+				left: 5%;
+				right: 5%;
+				top: 5%;
+				bottom: 5%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	body .intro {
+		font-size: 1em;
+	}
+
+	body #completed-projects, #in-progress-projects {
+		.clone {
+			height: 24em;
+			width: 37em;
+		}
+
+		li {
+			width: 37em;
+			height: 24em;
+
+				/* ---------------------- expand view (START) -------------------------- */
+			&[expand=''] {
+				width: 100%;
+				height: 100%;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: 0;
+				.project-card-cont {
+
+					.title-cont {
+						font-size: 0.5em;
+					}
+
+					.image-cont {
+						border-radius: 0px;
+					}
+
+					.image-cont:before {
+						border-radius: 0px;
+					}
+
+					.links-cont {
+						font-size: 0.5em;
+					}
+
+					.description-cont {
+						font-size: 0.7em;
+						padding-right: 0.5em;
+						padding-left: 0.5em;
+					}
+				}
+			}
+
+			/* ---------------------- expand view (END) -------------------------- */
+		}
+
+	}
+}
+
+@media screen and (max-height: 380px) {
+	body .intro {
+		font-size: 1em;
+	}
+
+	body #completed-projects, #in-progress-projects {
+
+		.clone {
+			height: 17em;
+			width: 30em;
+		}
+
+		li {
+			width: 30em;
+			height: 17em;
+
+				/* ---------------------- expand view (START) -------------------------- */
+			&[expand=''] {
+				width: 100%;
+				height: 100%;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: 0;
+				.project-card-cont {
+
+					.title-cont {
+						font-size: 0.5em;
+					}
+
+					.image-cont {
+						border-radius: 0px;
+					}
+
+					.image-cont:before {
+						border-radius: 0px;
+					}
+
+					.links-cont {
+						font-size: 0.5em;
+					}
+
+					.description-cont {
+						font-size: 0.7em;
+						padding-right: 0.5em;
+						padding-left: 0.5em;
+					}
+				}
+			}
+
+			/* ---------------------- expand view (END) -------------------------- */
+		}
+
 	}
 }

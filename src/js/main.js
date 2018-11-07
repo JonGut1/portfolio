@@ -263,11 +263,13 @@ class DOM extends Content {
 	setExpandOptions(el, attr) {
 		const selectedElement = document.querySelector(`.${el}`);
 		if (attr === 'expand') {
+			selectedElement.removeAttribute('hover', '');
 			this.body.style.overflow = 'hidden';
 			selectedElement.setAttribute(attr, '');
 			selectedElement.insertAdjacentHTML('beforebegin', '<div class="clone"></div>')
 			selectedElement.firstChild.insertAdjacentHTML('afterbegin', '<div class="exit-button-cont"><button tabindex="1" aria-label="close" class="glyphicon glyphicon-remove"></button></div>');
 		} else if (attr === 'colapse') {
+			selectedElement.setAttribute('hover', '');
 			this.body.style.overflow = 'auto';
 			const clone = document.querySelector('.clone');
 			clone.parentElement.removeChild(clone);
@@ -282,7 +284,7 @@ class DOM extends Content {
 		const projects = this.getProjects(content);
 		this.main.insertAdjacentHTML('afterbegin', `<div class="title"><h1>${title}</h1></div><section><ul tabindex="1" aria-label=${title} id=${id}></ul></section>`);
 		for (let project in projects) {
-			document.querySelector(`#${id}`).insertAdjacentHTML('beforeend', `<li tabindex="1" class="${project}"><div class="project-card-cont">${projects[project]}</div></li>`);
+			document.querySelector(`#${id}`).insertAdjacentHTML('beforeend', `<li tabindex="1" class="${project}" hover><div class="project-card-cont">${projects[project]}</div></li>`);
 		}
 	}
 

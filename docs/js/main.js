@@ -3168,11 +3168,13 @@ var DOM = function (_Content) {
 		value: function setExpandOptions(el, attr) {
 			var selectedElement = document.querySelector('.' + el);
 			if (attr === 'expand') {
+				selectedElement.removeAttribute('hover', '');
 				this.body.style.overflow = 'hidden';
 				selectedElement.setAttribute(attr, '');
 				selectedElement.insertAdjacentHTML('beforebegin', '<div class="clone"></div>');
 				selectedElement.firstChild.insertAdjacentHTML('afterbegin', '<div class="exit-button-cont"><button tabindex="1" aria-label="close" class="glyphicon glyphicon-remove"></button></div>');
 			} else if (attr === 'colapse') {
+				selectedElement.setAttribute('hover', '');
 				this.body.style.overflow = 'auto';
 				var clone = document.querySelector('.clone');
 				clone.parentElement.removeChild(clone);
@@ -3188,7 +3190,7 @@ var DOM = function (_Content) {
 			var projects = this.getProjects(content);
 			this.main.insertAdjacentHTML('afterbegin', '<div class="title"><h1>' + title + '</h1></div><section><ul tabindex="1" aria-label=' + title + ' id=' + id + '></ul></section>');
 			for (var project in projects) {
-				document.querySelector('#' + id).insertAdjacentHTML('beforeend', '<li tabindex="1" class="' + project + '"><div class="project-card-cont">' + projects[project] + '</div></li>');
+				document.querySelector('#' + id).insertAdjacentHTML('beforeend', '<li tabindex="1" class="' + project + '" hover><div class="project-card-cont">' + projects[project] + '</div></li>');
 			}
 		}
 	}, {
@@ -3402,5 +3404,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_485bca0.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_970771af.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])
