@@ -265,12 +265,14 @@ class DOM extends Content {
 		if (attr === 'expand') {
 			selectedElement.removeAttribute('hover', '');
 			this.body.style.overflow = 'hidden';
+			this.body.setAttribute('blur', '');
 			selectedElement.setAttribute(attr, '');
 			selectedElement.insertAdjacentHTML('beforebegin', '<div class="clone"></div>')
 			selectedElement.firstChild.insertAdjacentHTML('afterbegin', '<div class="exit-button-cont"><button tabindex="1" aria-label="close" class="glyphicon glyphicon-remove"></button></div>');
 		} else if (attr === 'colapse') {
 			selectedElement.setAttribute('hover', '');
 			this.body.style.overflow = 'auto';
+			this.body.removeAttribute('blur', '');
 			const clone = document.querySelector('.clone');
 			clone.parentElement.removeChild(clone);
 			const exitBut = document.querySelector('.exit-button-cont');

@@ -3170,12 +3170,14 @@ var DOM = function (_Content) {
 			if (attr === 'expand') {
 				selectedElement.removeAttribute('hover', '');
 				this.body.style.overflow = 'hidden';
+				this.body.setAttribute('blur', '');
 				selectedElement.setAttribute(attr, '');
 				selectedElement.insertAdjacentHTML('beforebegin', '<div class="clone"></div>');
 				selectedElement.firstChild.insertAdjacentHTML('afterbegin', '<div class="exit-button-cont"><button tabindex="1" aria-label="close" class="glyphicon glyphicon-remove"></button></div>');
 			} else if (attr === 'colapse') {
 				selectedElement.setAttribute('hover', '');
 				this.body.style.overflow = 'auto';
+				this.body.removeAttribute('blur', '');
 				var clone = document.querySelector('.clone');
 				clone.parentElement.removeChild(clone);
 				var exitBut = document.querySelector('.exit-button-cont');
@@ -3404,5 +3406,5 @@ var events = new Events();
 var Routing = function Routing() {
 	(0, _classCallCheck3.default)(this, Routing);
 };
-}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_970771af.js","/")
+}).call(this,require("rH1JPG"),typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer,arguments[3],arguments[4],arguments[5],arguments[6],"/fake_a4abd518.js","/")
 },{"babel-runtime/core-js/json/stringify":1,"babel-runtime/core-js/object/assign":2,"babel-runtime/core-js/object/get-prototype-of":5,"babel-runtime/helpers/classCallCheck":9,"babel-runtime/helpers/createClass":10,"babel-runtime/helpers/inherits":11,"babel-runtime/helpers/possibleConstructorReturn":12,"buffer":15,"rH1JPG":95}]},{},[96])
