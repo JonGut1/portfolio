@@ -36,7 +36,7 @@ class Content {
 					Also Google Maps api and Foursquare Places api was used in this project`,
 				},
 				githubLink: `https://github.com/JonGut1/NeighborhoodMapApp`,
-				demo: `https://jongut1.github.io/NeighborhoodMapApp/`,
+				demo: null,
 			},
 			myReads: {
 				title: 'MyReads App',
